@@ -22,11 +22,9 @@ An app to have a control of patients and their medical history
 ## Backlog
 
 User profile:
-- see my profile
 - upload my profile picture
-- see other users profile
-- list of events created by the user
-- list events the user is attending
+- Medical Api
+-Take one text and selected keywords
 
 Api text :
 - Api data base
