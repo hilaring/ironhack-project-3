@@ -57,7 +57,7 @@ Doctor profile with all his patients list
   - ListPageComponent
   - private
   - shows all Patients,  to details
-  - search Patient by date
+  - search Patient 
 - `/Patient/create` 
   - PatientCreatePageComponent
   - user only
@@ -66,7 +66,7 @@ Doctor profile with all his patients list
 - `/Patient/:id` 
   - PatientDetailPageComponent 
   - private
-  - details of one day work
+  - details of medical history
   - ProfilePageComponent
   - user only
   - my details
