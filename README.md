@@ -203,11 +203,6 @@ https://trello.com/b/xnjeS6l2/project-3-ironhack
 
 https://github.com/hilaring/ironhack-project-3
 
-
-[Deploy Link](http://heroku.com)
-
 ### Slides
 
-The url to your presentation slides
-
-[Slides Link](http://slides.com)
+https://slides.com/hilaring/project-3
