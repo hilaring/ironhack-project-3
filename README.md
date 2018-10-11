@@ -1,142 +1,209 @@
-# ironhack-project-3
-# Medical History
+# Iron Healt
+
 
 
 ## Description
 
+It is an application to improve communication between doctors and clinics. The main idea is based on developing a tool that can interpret what the patient tells the doctor.
 
 
-An app to have a control of patients and their medical history
 
 ## User Stories
 
--  **404:** As an anon/user I can see a 404 page if I try to reach a page that does not exist so that I know it's my fault
--  **Signup:** As an anon I can sign up in the platform so that I can start saving favorite Patient
--  **Login:** As a user I can login to the platform so that I can see my favorite Patient
--  **Logout:** As a user I can logout from the platform so no one else can use it
--  **Add Patient** As a user I can add a Patient and extra houers worked
--  **List Patient** As a user I want to see the list of all days worked
--  **Edit  Patient** As a user can edit the extra hours worked
--  **Delate a  Patient**User can delete extra hours 
+
+
+-  **404:**
+
+-  **Signup:** I can sign up as a doctor in the platform and write about the patients
+
+-  **Login:** I can login to the platform as a doctor, create and see my patients history
+
+-  **Logout:** I can logout from the platform 
+
+-  **Add patient** Add a new patient and create his history
+
+-  **List patients** See a list of all my patients
+
+-  **Search patient** Search patientes by name or birthdate
+
+-  **Medical histories** CRUD medical histories
+
+
 
 ## Backlog
 
-User profile:
-- upload my profile picture
-- Medical Api
--Take one text and selected keywords
 
-Api text :
-- Api data base
+- Upload profile picture
+- Use medical API
 
-Homepage:
-- 
-Doctor profile with all his patients list 
-  
+
 # Client
+
+
 
 ## Routes
 
+
+
 - `/`
+
   - HomePageComponent
+
   - public
+
   - just promotional copy
+
 - `/auth/signup`
   - SignupPageComponent
+
   - anon only
+
   - signup form, link to login
+
   - navigate to homepage after signup
+
 - `/auth/login`
+
   - LoginPageComponent
+
   - anon only
+
   - login form, link to signup
+
   - navigate to homepage after login
-- `/Patient` 
-  - ListPageComponent
-  - private
-  - shows all Patients,  to details
-  - search Patient 
-- `/Patient/create` 
-  - PatientCreatePageComponent
+
+- `/patients`
+  - RestaurantListPageComponent
+
+  - public
+
+  - shows all restaurants, links to details
+
+  - search restaurants by name
+
+- `/patients/create` 
+  - RestaurantCreatePageComponent
+
   - user only
-  - creates a new Patient
-  - navigates to Patient detail page after creation
-- `/Patient/:id` 
-  - PatientDetailPageComponent 
-  - private
-  - details of medical history
+
+  - creates a new restaurant
+
+  - navigates to restaurant's detail page after creation
+
+- `/patients/:id` 
+  - RestaurantDetailPageComponent 
+
+  - public
+
+  - details of one restaurant
+
+  - button to add to favorite
+
+  - show star if in favorites already
+
+- `/profile/me` 
   - ProfilePageComponent
+
   - user only
+
   - my details
-- `**`
+
+  - my favorite restaurants
+
+  - restaurants created by me
+
+- `/history`
+   - ListPageComponent
+
+   - private
+
+   - shows all history,  to details
+
+   - search history
+
+- `/history/create`
+   - MedicalHistoryCreatePageComponent
+
+   - user only
+
+- `/history/:id`
+   - PatientDetailPageComponent
+
+   - private
+
+   - details of medical history
+
+   - user only
+
+   - my details
+
   - NotFoundPageComponent
 
 
+
+
 ## Components
--User component
--Name
--Password
-
+- User component
+  - Name
+  - Password
 - Patient component
--Name
--Adress 
--Email
--Phone
-
--Medical History
--Symptom 
--Disease (Enfermedad )
--Prescription  
-
-
+  - _id
+  - Name
+  - Adress 
+  - Email
+  - Phone
+- Medical History
+  - Patient _id
+  - Symptom 
+  - Disease
+  - Prescription  
 ## Services
-
 - Auth Service
   - auth.login(user)
   - auth.signup(user)
   - auth.logout()
   - auth.me()
-  - auth.getUser() // synchronous
+  - auth.getUser() / synchronous
 - Patient Service
   - Patient.list()
   - Patient.search(terms)
   - Patient.create(data)
   - Patient.detail(id)
-  -Patient.removeFavorite(id)   
-
+  - Patient.removeFavorite(id)   
+- History Service
+  - History.list()
+  - History.search(terms)
+  - History.create(data)
+  - History.detail(id)
 # Server
-
 ## Models
-
-User model
+- User model
 
 ```
 username - String // required
 password - String // required
+```
+- Patient model
 
 ```
-
-Patient model
-
-```
+_id
 Username - String // required
-Name-String
-Email - String
-Phone-Number
+Name - String // required
+Email - String // required
+Phone - Number // required
 Address - String
 ```
+- Medical History model
 
--Medical History model
 ```
--Symptom -Sring
--Disease (Enfermedad ) -String
--Prescription  -String
-
+Patient _id
+Symptom - String // required
+Disease - String
+Prescription - String
 ```
 ## API Endpoints (backend routes)
-
 - GET /auth/me
-  - 404 if no user in session
+  - 404 
   - 200 with user object
 - POST /auth/signup
   - 401 if user logged in
@@ -191,18 +258,14 @@ Address - String
   - create Patient
   - Patient object
 - GET /Patient/:id
-
   
-
 ## Links
-
 ### Trello/Kanban
 https://trello.com/b/xnjeS6l2/project-3-ironhack
-
 ### Git
-
 https://github.com/hilaring/ironhack-project-3
 
-### Slides
+https://github.com/hilaring/ironhack-project-3-server
 
+### Slides
 https://slides.com/hilaring/project-3
