@@ -14,7 +14,7 @@ class Sidebar extends Component {
           Patients
         </Link>
       </Menu>
-
+  
     )
   }
 }
