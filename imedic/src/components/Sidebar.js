@@ -10,8 +10,11 @@ class Sidebar extends Component {
         <Link to="/" className="menu-item">
           Home
         </Link>
-        <Link to="/laravel" className="menu-item"> 
+        <Link to="/patients" className="menu-item"> 
           Patients
+        </Link>
+        <Link to="/info" className="menu-item"> 
+          Info
         </Link>
       </Menu>
   
