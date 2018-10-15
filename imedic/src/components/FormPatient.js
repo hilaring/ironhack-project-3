@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
- class Form extends Component{
+ class FormPatient extends Component{
   state = {
     name: '',
     last_name: '',
@@ -38,4 +38,4 @@ import React, {Component} from 'react'
      )
   }
 }
- export default Form;
+ export default FormPatient;

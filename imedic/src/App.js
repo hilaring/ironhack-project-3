@@ -11,7 +11,7 @@ class App extends Component {
             <Sidebar />
             <div id="page-wrap">
               <h1>IMEDIC</h1>
-              <h2>Imedic Home Page</h2>
+              <h2>Home Page</h2>
             </div>
           </div>
         </BrowserRouter>
