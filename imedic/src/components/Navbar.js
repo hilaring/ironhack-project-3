@@ -9,7 +9,7 @@ export default class Navbar extends Component {
     const { isLogged, user, logoutUser } = this.props;
     const { username } = user;
     return (
-      <div>
+      <div className="navbar">
         { isLogged ? <div>
             <p>username: { username }</p>
             <p onClick={logoutUser}>Logout</p>

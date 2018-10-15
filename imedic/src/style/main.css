@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700');
+
+.title-app {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: black;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+}
+
+.start-box {
+    margin: 50px;
+    border-radius: 9px;
+    background-color: #e8e8e8;
+}
+
+.navbar {
+    font-size: 18px;
+}

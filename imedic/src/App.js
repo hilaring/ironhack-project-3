@@ -8,7 +8,9 @@ import Navbar from './components/Navbar';
 import Private from './pages/Private';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
+import Title from './components/Title';
 import auth from './lib/auth-service';
+import './style/main.css'
 import './App.css';
 
 class App extends Component {
@@ -62,14 +64,15 @@ class App extends Component {
         return <div>Loading</div>
       default:
         return (
-          <div>
-            <h1 className="title-app">iMedic</h1>
-            <Navbar isLogged={isLogged} user={user} logoutUser={this.logoutUser} />
-            <Switch>
-              <AnonRoute path="/signup" component={Signup} setUser={this.setUser} isLogged={isLogged} />
-              <AnonRoute path="/login" component={Login} setUser={this.setUser} isLogged={isLogged} />
-              <PrivateRoute path="/private" component={Private} isLogged={isLogged} user={user} />
-            </Switch>
+          <div className="start-box">
+            <Title />
+            <Navbar isLogged={isLogged} user={user} logoutUser={this.logoutUser} />  
+              <Switch>
+                <AnonRoute path="/signup" component={Signup} setUser={this.setUser} isLogged={isLogged} />
+                <AnonRoute path="/login" component={Login} setUser={this.setUser} isLogged={isLogged} />
+                <PrivateRoute path="/private" component={Private} isLogged={isLogged} user={user} />
+              </Switch>
+              <br />
           </div>
         );
     }
