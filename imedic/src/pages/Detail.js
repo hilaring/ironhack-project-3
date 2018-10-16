@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom';
-import Patient from 'data';
+
 export default class Detail extends Component {
   
   state = {
@@ -10,7 +10,7 @@ export default class Detail extends Component {
 
   componentDidMount() {
     const { id } = this.props.match.params; 
-    Data.getpatient(id)
+    Document.getpatient(id)
       .then(({data}) => {
         this.setState({
           patient: data,

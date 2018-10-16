@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-import Patient from 'data';
+
+
 class Lista extends Component {
 
   state = {
@@ -9,7 +10,7 @@ class Lista extends Component {
   }
 
   componentDidMount() {
-    Data.getpatient()
+    Document.getpatient()
       .then((data) => {
         console.log(data);
         this.setState({
