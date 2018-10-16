@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Api from '../lib/patients-service';
 
 
-class Lista extends Component {
+class ListPatients extends Component {
 
   state = {
     patient: [],
@@ -10,7 +11,7 @@ class Lista extends Component {
   }
 
   componentDidMount() {
-    Document.getpatient()
+    Api.getPatients()
       .then((data) => {
         console.log(data);
         this.setState({
@@ -26,7 +27,7 @@ class Lista extends Component {
   renderList = () => {
     return this.state.patient.map(({ name, last_name, _id }) => 
       <li key={_id}>
-        {name} - <Link to={`/patient/${_id}`}>{last_name}</Link> 
+        {name} - <Link to={`/patients/${_id}`}>{last_name}</Link> 
       </li>)
   }
 
@@ -42,4 +43,4 @@ class Lista extends Component {
   }
 }
 
-export default Lista;
+export default ListPatients;

@@ -32,7 +32,7 @@ import React, {Component} from 'react'
           <br/>
           <input placeholder="Adress" value={this.state.adress} onChange={e => this.setState({adress: e.target.value})}  />
           <br/>
-          <button onClick={e => this.onSubmit(e)} >Submit</button>
+          <button onClick={e => this.onSubmit(e)} >Crear</button>
           <br/>
       </form>
      )
