@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import Patient from 'data';
-class Home extends Component {
+class Lista extends Component {
 
   state = {
     patient: [],
@@ -41,4 +41,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Lista;

@@ -10,7 +10,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Title from './components/Title';
 import auth from './lib/auth-service';
-import Home from './pages/Home';
+import Lista from './pages/Lista';
 import Detail from'./pages/Detail';
 import './style/main.css'
 import './App.css';
@@ -73,7 +73,7 @@ class App extends Component {
                 <AnonRoute path="/signup" component={Signup} setUser={this.setUser} isLogged={isLogged} />
                 <AnonRoute path="/login" component={Login} setUser={this.setUser} isLogged={isLogged} />
                 <PrivateRoute path="/private" component={Private} isLogged={isLogged} user={user} />
-                <PrivateRoute exact path='/' component={Home}/>
+                <PrivateRoute exact path='/' component={Lista}/>
                 <PrivateRoute path='/patient/:id' component={Detail}/>
               </Switch>
               <br />
