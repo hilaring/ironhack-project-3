@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Api from '../lib/patients-service';
+import { FaSearch } from 'react-icons/fa';
+
 
 
 class ListPatients extends Component {
@@ -13,8 +15,7 @@ class ListPatients extends Component {
   componentDidMount() {
     Api.getPatients()
     .then((data) => {
-        console.log("Joder")
-        console.log(data);
+
         this.setState({
           patients: data,
           isLoading: false,
@@ -26,8 +27,9 @@ class ListPatients extends Component {
   renderList = () => {
     return this.state.patients.map(({ name, last_name, _id }) => 
       <li key={_id}>
-        {name} - <Link to={`/patients/${_id}`}>{last_name}</Link> 
-      </li>)
+        {name} {last_name} <Link to={`/patients/${_id}`}><FaSearch /></Link> 
+      </li>
+    )
   }
 
   render() {   

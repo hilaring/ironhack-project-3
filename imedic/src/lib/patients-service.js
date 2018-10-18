@@ -8,7 +8,7 @@ class Api {
     }
 
     getPatients() {
-        return this.api.get('/')
+        return this.api.get(`/patients`)
             .then(({ data }) => data);
     }
 
