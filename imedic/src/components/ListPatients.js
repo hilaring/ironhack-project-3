@@ -20,14 +20,14 @@ class ListPatients extends Component {
         })
       })
       .catch((error) => {
-
+        
       })
   }
 
   renderList = () => {
-    return this.state.patient.map(({ name, last_name, _id }) => 
+    return this.state.patients.map(({ name, last_name, _id }) => 
       <li key={_id}>
-        {name} - <Link to={`/patients/${_id}`}>{last_name}</Link> 
+        {name} - <Link to={`/patiens ${_id}`}>{last_name}</Link> 
       </li>)
   }
 
@@ -36,7 +36,7 @@ class ListPatients extends Component {
       <div>
         <h1>Listado de Pacientes</h1>
         <ul>
-          {this.state.isLoading ? <h1>Loading</h1> : this.renderList()}
+          {this.state.isLoading ? <h1>Loading</h1> : this.renderList()} 
         </ul>
       </div>
     )

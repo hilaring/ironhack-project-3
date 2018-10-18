@@ -11,7 +11,7 @@ class DetailPatient extends Component {
 
   componentDidMount() {
     const { id } = this.props.match.params; 
-    Patients.getpatient(id)
+    Patients.getPatient(id)
       .then(({data}) => {
         this.setState({
           patient: data,
