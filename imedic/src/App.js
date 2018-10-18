@@ -10,7 +10,6 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Title from './components/Title';
 import auth from './lib/auth-service';
-// import patients from './lib/patients-service';
 import './style/main.css'
 import './App.css';
 

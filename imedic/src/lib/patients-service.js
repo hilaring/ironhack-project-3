@@ -3,12 +3,12 @@ import axios from 'axios';
 class Api {
     constructor() {
         this.api = axios.create({
-            baseURL: 'http://localhost:3000/api',
+            baseURL: 'http://localhost:5000',
         })
     }
 
     getPatients() {
-        return this.api.get(`/patients`)
+        return this.api.get('/')
             .then(({ data }) => data);
     }
 
