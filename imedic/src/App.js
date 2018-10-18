@@ -1,16 +1,17 @@
 // import Sidebar from './components/Sidebar';
 // import {BrowserRouter} from 'react-router-dom';
 import React, { Component } from 'react';
-import {Switch} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
 import AnonRoute from './components/AnonRoute';
 import Navbar from './components/Navbar';
+import DetailPatient from './components/DetailPatient';
+import ListPatients from './components/ListPatients';
 import Private from './pages/Private';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Title from './components/Title';
 import auth from './lib/auth-service';
-// import patients from './lib/patients-service';
 import './style/main.css'
 import './App.css';
 
@@ -72,6 +73,9 @@ class App extends Component {
                 <AnonRoute path="/signup" component={Signup} setUser={this.setUser} isLogged={isLogged} />
                 <AnonRoute path="/login" component={Login} setUser={this.setUser} isLogged={isLogged} />
                 <PrivateRoute path="/private" component={Private} isLogged={isLogged} user={user} />
+                <Route exact path='/' component={ListPatients}/>
+                <Route path='/patients/:id' component={DetailPatient}/>
+                
               </Switch>
               <br />
           </div>

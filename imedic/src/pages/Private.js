@@ -11,6 +11,7 @@ class Private extends Component {
         <Search/><br></br>
         <FormPatient/><br></br>
         <ListPatients/>
+        
       </div>
       </div>
     )
