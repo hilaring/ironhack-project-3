@@ -6,26 +6,25 @@ import Api from '../lib/patients-service';
 class ListPatients extends Component {
 
   state = {
-    patient: [],
+    patients: [],
     isLoading: true,
   }
 
   componentDidMount() {
     Api.getPatients()
-      .then((data) => {
+    .then((data) => {
+        console.log("Joder")
         console.log(data);
         this.setState({
-          patient: data,
-          isLoading: false
+          patients: data,
+          isLoading: false,
         })
       })
-      .catch((error) => {
-
-      })
+      .catch((error) => console.log("Error: ", error)) 
   }
 
   renderList = () => {
-    return this.state.patient.map(({ name, last_name, _id }) => 
+    return this.state.patients.map(({ name, last_name, _id }) => 
       <li key={_id}>
         {name} - <Link to={`/patients/${_id}`}>{last_name}</Link> 
       </li>)
@@ -36,7 +35,7 @@ class ListPatients extends Component {
       <div>
         <h1>Listado de Pacientes</h1>
         <ul>
-          {this.state.isLoading ? <h1>Loading</h1> : this.renderList()}
+          {this.state.isLoading ? <h1>Loading</h1> : this.renderList()} 
         </ul>
       </div>
     )

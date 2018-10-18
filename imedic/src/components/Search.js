@@ -16,7 +16,7 @@ import React, { Component } from 'react';
   render(){
     return(
       <div>
-        <input type="text" value={this.state.search} placeholder="Search for Patient" onChange={this.updateSearch.bind(this)} />
+        <input type="text" value={this.state.search} placeholder="Search for Patients" onChange={this.updateSearch.bind(this)} />
       </div>
     )
   }

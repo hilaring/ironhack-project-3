@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Search from './components/Search';
-import Form from './components/Form';
+import FormPatient from '../components/FormPatient';
 import Patient from './components/Patient';
 
 class CreatePatient extends Component {
@@ -47,7 +47,7 @@ class CreatePatient extends Component {
                 className="button is-info toggle-btn">
                 {this.state.formShowing ? 'Hide The Form' : 'Show Me The Form'}
               </button>
-              {this.state.formShowing && <Form onSubmit={value => this.onSubmit(value)} />}
+              {this.state.formShowing && <FormPatient onSubmit={value => this.onSubmit(value)} />}
             </div>
             {eachPatient}
       </div>
