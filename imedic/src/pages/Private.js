@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Search from '../components/Search';
 import FormPatient from '../components/FormPatient';
-import ListPatient from '../components/ListPatients';
+import ListPatients from '../components/ListPatients';
+
 class Private extends Component {
   render() {
     return (
@@ -9,7 +10,7 @@ class Private extends Component {
       <div id='private'>
         <Search/><br></br>
         <FormPatient/><br></br>
-        <ListPatient/>
+        <ListPatients/>
       </div>
       </div>
     )
