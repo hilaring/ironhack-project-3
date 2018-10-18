@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import FormPatient from '.components./Form';
+import DetailPatient from'../components/DetailPatient';
+
  class EditPatient extends Component {
   render() {
     return (
       <div>
         <h1>Edit</h1>
-        <FormPatient/>
+        <DetailPatient/>
       </div>
     )
   }

@@ -7,16 +7,16 @@ import React, { Component } from 'react';
     }
   }
   updateSearch = (event) =>{
-    const {value} = event.target
+    const {name} = event.target
     this.setState({
-      search: value
+      search: name
     })
-    this.props.searchPatient(value)
+    this.props.searchPatients(name)
   }
   render(){
     return(
       <div>
-        <input type="text" value={this.state.search} placeholder="Search for Patients" onChange={this.updateSearch.bind(this)} />
+        <input type="text" name={this.state.search} placeholder="Search for Patients" onChange={this.updateSearch.bind(this)} />
       </div>
     )
   }

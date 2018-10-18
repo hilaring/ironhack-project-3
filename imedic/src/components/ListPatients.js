@@ -13,7 +13,6 @@ class ListPatients extends Component {
   componentDidMount() {
     Api.getPatients()
     .then((data) => {
-        console.log("Joder")
         console.log(data);
         this.setState({
           patients: data,
@@ -26,7 +25,7 @@ class ListPatients extends Component {
   renderList = () => {
     return this.state.patients.map(({ name, last_name, _id }) => 
       <li key={_id}>
-        {name} - <Link to={`/patients/${_id}`}>{last_name}</Link> 
+        {name} - <Link to={`patients/${_id}`}>{last_name}</Link> 
       </li>)
   }
 
