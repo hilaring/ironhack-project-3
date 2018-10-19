@@ -1,5 +1,3 @@
-// import Sidebar from './components/Sidebar';
-// import {BrowserRouter} from 'react-router-dom';
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
