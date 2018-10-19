@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
- class FormPatient extends Component{
+ class FormHistory extends Component{
   state = {
     Syntoms: '',
     disease: '',
@@ -20,7 +20,7 @@ import React, {Component} from 'react'
   render(){
     return(
       <form>
-          <input placeholder="Syntoms" value={this.state.Syntoms} onChange={e => this.setState({syntoms: e.target.value})}  />
+          <input placeholder="Syntoms" value={this.state.syntoms} onChange={e => this.setState({syntoms: e.target.value})}  />
           <br/>
            <input placeholder="Disease" value={this.state.disease} onChange={e => this.setState({disease: e.target.value})}  />
           <br/>
@@ -32,4 +32,4 @@ import React, {Component} from 'react'
      )
   }
 }
- export default FormPatient;
+ export default FormHistory;
