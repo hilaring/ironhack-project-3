@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Search from './components/Search';
-import FormPatient from '../components/FormPatient';
+import FormPatient from './FormPatient';
 import Patient from './components/Patient';
 
 class CreatePatient extends Component {

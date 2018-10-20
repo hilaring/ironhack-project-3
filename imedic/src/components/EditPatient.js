@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DetailPatient from'../components/DetailPatient';
+import DetailPatient from'./DetailPatient';
 
  class EditPatient extends Component {
   render() {
