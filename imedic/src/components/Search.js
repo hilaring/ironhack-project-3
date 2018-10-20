@@ -21,4 +21,4 @@ import React, { Component } from 'react';
     )
   }
 }
- export default Search
+ export default Search;

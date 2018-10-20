@@ -25,9 +25,9 @@ class ListHistory extends Component {
   }
 
   renderList = () => {
-    return this.state.histories.map(({ syntoms, disease, _id }) => 
+    return this.state.histories.map(({ syntoms, disease,prescription, _id }) => 
       <li key={_id}>
-        {syntoms} {disease} <Link to={`/patients/${_id}`}><FaSearch /></Link> 
+        {syntoms} {disease} {prescription} <Link to={`history/${_id}`}><FaSearch /></Link> 
       </li>
     )
   }
