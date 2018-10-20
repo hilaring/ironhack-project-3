@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import Api from '../lib/patients-service';
 import { FaSearch } from 'react-icons/fa';
 
-
-
 class ListPatients extends Component {
 
   state = {
@@ -15,7 +13,6 @@ class ListPatients extends Component {
   componentDidMount() {
     Api.getPatients()
     .then((data) => {
-
         this.setState({
           patients: data,
           isLoading: false,

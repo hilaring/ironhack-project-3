@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import Api from '../lib/patients-service';
 import { FaSearch } from 'react-icons/fa';
 
-
-
 class ListHistory extends Component {
 
   state = {
