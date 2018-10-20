@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Search from './components/Search';
-import FormPatient from '../components/FormPatient';
-import Patient from './components/Patient';
+import Search from './Search';
+import FormPatient from './FormPatient';
+import Patient from './DetailPatient';
 
 class CreatePatient extends Component {
     constructor(){
@@ -33,6 +33,7 @@ class CreatePatient extends Component {
           patient: modifiedList
         });
       }
+      
   render() {
     const eachPatient = this.state.patient.map((patient, index) => {
         return <Patient name={patient.name} last_name={patient.last_name} email={patient.email} number={patient.number} adress={patient.adress} />

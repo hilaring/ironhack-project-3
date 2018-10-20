@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import Patients from '../lib/patients-service';
 import FormHistory from'./FormHistory';
 import ListHistory from './ListHistory';
-class DetailPatient extends Component {
-  
+
+class DetailPatient extends Component {  
   state = {
     patient: {},
     isLoading: true,

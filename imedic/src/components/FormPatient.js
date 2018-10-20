@@ -1,4 +1,6 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import './CreatePatient';
+
  class FormPatient extends Component{
   state = {
     name: '',

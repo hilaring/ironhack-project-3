@@ -1,35 +1,36 @@
 import React, {Component} from 'react'
  class FormHistory extends Component{
   state = {
-    Syntoms: '',
+    syntoms: '',
     disease: '',
-    Prescription: '',
+    prescription: '',
    
   }
   onSubmit = (e) =>{
     e.preventDefault()
     
     this.setState({
-        Syntoms: '',
+        syntoms: '',
         disease: '',
-        Prescription: '',
+        prescription: '',
        
     })
     this.props.onSubmit(this.state)
   }
   render(){
+    const { syntoms, disease, prescription } = this.state;
     return(
       <form>
-          <input placeholder="Syntoms" value={this.state.syntoms} onChange={e => this.setState({syntoms: e.target.value})}  />
+          <input placeholder="syntoms" name={syntoms} value={this.state.syntoms} onChange={e => this.setState({syntoms: e.target.value})}  />
           <br/>
-           <input placeholder="Disease" value={this.state.disease} onChange={e => this.setState({disease: e.target.value})}  />
+           <input placeholder="disease" name={disease} value={this.state.disease} onChange={e => this.setState({disease: e.target.value})}  />
           <br/>
-          <input placeholder="Prescriptions" value={this.state.prescriptions} onChange={e => this.setState({prescriptions: e.target.value})}  />
+          <input placeholder="prescription" name={prescription} value={this.state.prescription} onChange={e => this.setState({prescription: e.target.value})}  />
           <br/>
-          <button onClick={e => this.onSubmit(e)} >Submit</button>
+          <button type="submit" onClick={e => this.onSubmit(e)} >Submit</button>
           <br/>
       </form>
      )
   }
 }
- export default FormHistory;
+export default FormHistory;
