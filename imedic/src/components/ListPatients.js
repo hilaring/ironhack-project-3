@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Api from '../lib/patients-service';
 import { FaSearch } from 'react-icons/fa';
+import Api from '../lib/patients-service';
+import FormCreatePatient from './FormCreatePatient'
 
 class ListPatients extends Component {
 
@@ -36,6 +37,7 @@ class ListPatients extends Component {
         <ul>
           {this.state.isLoading ? <h1>Loading</h1> : this.renderList()} 
         </ul>
+        <FormCreatePatient />
       </div>
     )
   }
