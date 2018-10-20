@@ -10,7 +10,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Title from './components/Title';
 import auth from './lib/auth-service';
-import './style/main.css'
+import './style/main.css';
 import './App.css';
 
 class App extends Component {

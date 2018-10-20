@@ -97,13 +97,3 @@ body {
   background: rgba(0, 0, 0, 0.3);
 }
 
-#private{
-  text-align: center;
-}
-
-#History{
-  text-align: center;
-  float:right;
-  margin-top: -420px;
-  margin-right: 100px;
-}
