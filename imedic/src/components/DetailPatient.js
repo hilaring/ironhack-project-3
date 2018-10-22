@@ -33,7 +33,7 @@ class DetailPatient extends Component {
         <h3>Adress</h3>
         <p>{adress}</p>
         <Link to="/">Back to home</Link>
- 
+        
       </Fragment>
     );
   }
