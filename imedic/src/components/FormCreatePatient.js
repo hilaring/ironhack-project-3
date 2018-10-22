@@ -27,13 +27,14 @@ class NewPatient extends Component {
     Api.createPatient({ name, last_name, email, number, adress })
       .then((result) => {
         //redirecciona al enviar
-        this.props.history.push(`/`)
+       this.props.history.push(`/`)
+       
       })
       .catch((error) => {console.log(error)})
   }
 
   render() {
-    const { name, last_name, email, number, adress } = this.state;
+    const { name, last_name, email, number, adress } = this.state
     return (
       <div>
         <form>
