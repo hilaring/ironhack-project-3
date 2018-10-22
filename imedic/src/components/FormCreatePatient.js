@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Api from '../lib/patients-service';
 
-export default class NewPatient extends Component {
+class NewPatient extends Component {
 
   state = {
     name: '',
@@ -10,6 +10,8 @@ export default class NewPatient extends Component {
     number: '',
     adress: '',
   }
+
+
 
   handleOnChange = (e) => {
     this.setState({
@@ -24,7 +26,6 @@ export default class NewPatient extends Component {
     const { name, last_name, email, number, adress } = this.state
     Api.createPatient({ name, last_name, email, number, adress })
       .then((result) => {
-        console.log(result)
         //redirecciona al enviar
         this.props.history.push(`/`)
       })
@@ -52,3 +53,4 @@ export default class NewPatient extends Component {
     )
   }
 }
+export default NewPatient;

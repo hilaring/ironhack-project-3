@@ -10,6 +10,18 @@ class ListPatients extends Component {
     patients: [],
     isLoading: true,
   }
+  
+
+  handleDelete = (id) => {
+    Api.deletePatient(id)
+      .then(()=> {
+        // no funciona
+        // this.props.history.push('/')
+        this.getPatients()
+      })
+      .catch(error => console.log(error))
+  }
+
 
   componentDidMount() {
     Api.getPatients()
@@ -26,6 +38,7 @@ class ListPatients extends Component {
     return this.state.patients.map(({ name, last_name, _id }) => 
       <li key={_id}>
         {name} {last_name} <Link to={`/patients/${_id}`}><FaSearch /></Link> 
+        <button onClick={() => this.handleDelete(_id)}>Delete</button>
       </li>
     )
   }
