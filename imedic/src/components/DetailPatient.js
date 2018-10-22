@@ -1,14 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom';
 import Patients from '../lib/patients-service';
-<<<<<<< HEAD
-import FormHistory from'./FormHistory';
-
-class DetailPatient extends Component {
-  
-=======
 class DetailPatient extends Component {  
->>>>>>> dev
   state = {
     patient: {},
     isLoading: true,
@@ -40,14 +33,7 @@ class DetailPatient extends Component {
         <h3>Adress</h3>
         <p>{adress}</p>
         <Link to="/">Back to home</Link>
-<<<<<<< HEAD
-        <div id="History">
-        <h1>Nuevo Historial medico</h1>
-        <FormHistory/>
-        </div>
-=======
  
->>>>>>> dev
       </Fragment>
     );
   }
