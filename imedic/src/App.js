@@ -73,7 +73,6 @@ class App extends Component {
                 <PrivateRoute path="/private" component={Private} isLogged={isLogged} user={user} />
                 <Route exact path='/' component={ListPatients}/>
                 <Route path='/patients/:id' component={DetailPatient}/>
-                
               </Switch>
               <br />
           </div>
