@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Api from '../lib/patients-service';
+import { withRouter } from "react-router-dom";
 
  class FormEditPatient extends Component {
 
@@ -48,7 +49,7 @@ import Api from '../lib/patients-service';
     const { name, last_name, email, number, adress } = this.state
     return (
         <div>
-          <form>
+          <form onSubmit={this.handleSubmit}>
             <label htmlFor="">Name</label>
             <input type="text" value={name} name="name" onChange={this.handleOnChange} />
             <label htmlFor="">Last name</label>
@@ -59,10 +60,10 @@ import Api from '../lib/patients-service';
             <input type="text" value={number} name="number" onChange={this.handleOnChange} />
             <label htmlFor="">Adress</label>
             <input type="text" value={adress} name="adress" onChange={this.handleOnChange} />
-            <input type="submit" value="create" onSubmit={this.handleSubmit} />
+            <input type="submit" value="Update" />
           </form>
         </div>
     )
   }
 }
-export default FormEditPatient;
+export default withRouter(FormEditPatient);
