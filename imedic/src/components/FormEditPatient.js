@@ -57,7 +57,7 @@ import { withRouter } from "react-router-dom";
             <label htmlFor="">Email</label>
             <input type="text" value={email} name="email" onChange={this.handleOnChange} />
             <label htmlFor="">Phone number</label>
-            <input type="text" value={number} name="number" onChange={this.handleOnChange} />
+            <input type="number" value={number} name="number" onChange={this.handleOnChange} />
             <label htmlFor="">Adress</label>
             <input type="text" value={adress} name="adress" onChange={this.handleOnChange} />
             <input type="submit" value="Update" />
