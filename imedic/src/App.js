@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, { Component, Fragment } from 'react';
+import { Router, Route, Switch } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
 import AnonRoute from './components/AnonRoute';
 import Navbar from './components/Navbar';
@@ -64,20 +64,19 @@ class App extends Component {
         return <div>Loading</div>
       default:
         return (
-          <div className="start-box">
-            <Title />
-            <Navbar isLogged={isLogged} user={user} logoutUser={this.logoutUser} />  
-              <Switch>
-                <AnonRoute path="/signup" component={Signup} setUser={this.setUser} isLogged={isLogged} />
-                <AnonRoute path="/login" component={Login} setUser={this.setUser} isLogged={isLogged} />
-                <PrivateRoute path="/private" component={Private} isLogged={isLogged} user={user} />
-                <Route exact path='/' component={ListPatients}/>
-                <Route path='/patients/:id' component={DetailPatient}/>
-                
-              </Switch>
-              <br />
-          </div>
+            <Fragment>
+              <Title />
+              <Navbar isLogged={isLogged} user={user} logoutUser={this.logoutUser} />  
+                <Switch>
+                  <AnonRoute path="/signup" component={Signup} setUser={this.setUser} isLogged={isLogged} />
+                  <AnonRoute path="/login" component={Login} setUser={this.setUser} isLogged={isLogged} />
+                  <PrivateRoute path="/private" component={Private} isLogged={isLogged} user={user} />
+                  <Route exact path='/' component={ListPatients}/>
+                  <Route path='/patients/:id' component={DetailPatient}/>
+                </Switch>
+            </Fragment>
         );
+        
     }
   }
 }
