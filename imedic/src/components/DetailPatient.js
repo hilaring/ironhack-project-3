@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom';
 import Patients from '../lib/patients-service';
 import FormEditPatient from './FormEditPatient';
+import ListHistory from './ListHistory';
 
 class DetailPatient extends Component {  
   state = {
@@ -35,7 +36,11 @@ class DetailPatient extends Component {
         <h3>Adress</h3>
         <p>{adress}</p>
         <Link to="/">Back to home</Link>
+        < div id="private">
+        <h1>Edit Patient</h1>
       <FormEditPatient />
+      <ListHistory/>
+        </div>
       </Fragment>
     );
   }
