@@ -51,7 +51,7 @@ class ListHistory extends Component {
         <ul>
           {this.state.isLoading ? <h1>Loading</h1> : this.renderList()} 
         </ul>
-        <FormCreateHistory />
+        <FormCreateHistory/>
       </div>
     )
   }

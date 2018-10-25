@@ -8,7 +8,6 @@ class NewHistory extends Component {
     syntoms: '',
     disease: '',
     prescription: '',
-    
   }
 
   handleOnChange = (e) => {
@@ -22,6 +21,8 @@ class NewHistory extends Component {
     e.preventDefault();
     //espera el objeto que le viene del body
     const { syntoms, disease, prescription} = this.state
+    console.log('data', syntoms, disease, prescription)
+
     Api.createHistory({ syntoms, disease, prescription })
       .then((result) => {
         console.log('', result)

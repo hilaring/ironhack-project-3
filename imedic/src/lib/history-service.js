@@ -3,29 +3,31 @@ import axios from 'axios';
 class Api {
     constructor() {
         this.api = axios.create({
-            baseURL: 'http://localhost:5000',
+            baseURL: 'http://localhost:5000/histories',
         })
     }
 
     gethistory() {
-        return this.api.get(`/historys`)
+        return this.api.get(`/`)
             .then(({ data }) => data);
     }
 
     getHistory(id) {
-        return this.api.get(`/historys/${id}`);
+        return this.api.get(`/${id}`);
     }
 
     editHistory(id, body) {
-        return this.api.put(`/historys/${id}`, body);
+        return this.api.put(`/${id}`, body);
     }
 
     createHistory(body) {
-        return this.api.post('/historys', body);
+        console.log(body)
+        console.log("JODER PERE")
+        return this.api.post(`/`, body);
     }
 
     deleteHistory(id) {
-        return this.api.delete(`/historys/${id}`);
+        return this.api.delete(`/${id}`);
     }
 }
 
