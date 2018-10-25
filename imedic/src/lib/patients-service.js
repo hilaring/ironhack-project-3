@@ -21,7 +21,6 @@ class Api {
     }
 
     createPatient(body) {
-        console.log('hola')
         return this.api.post(`/patients`, body);
     }
 

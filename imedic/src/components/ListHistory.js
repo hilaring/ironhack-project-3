@@ -1,33 +1,34 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { FaEdit ,FaEraser } from 'react-icons/fa';
-import Api from '../lib/patients-service';
-import FormCreatePatient from './FormCreatePatient'
+import Api from '../lib/history-service';
+import FormCreateHistory from './FormCreateHistory';
 
-class ListPatients extends Component {
+class ListHistory extends Component {
 
   state = {
-    patients: [],
+    histories: [],
     isLoading: true,
   }
   
 
   handleDelete = (id) => {
-    Api.deletePatient(id)
+    Api.deleteHistory(id)
       .then(()=> {
         // no funciona
-        // this.props.history.push('/')
-        this.getPatients()
+       //this.props.history.push('/')
+        this.getHistory()
       })
       .catch(error => console.log(error))
   }
 
 
   componentDidMount() {
-    Api.getPatients()
+    Api.getHistory()
     .then((data) => {
+      console.log(data)
         this.setState({
-          patients: data,
+          histories: data,
           isLoading: false,
         })
       })
@@ -35,9 +36,9 @@ class ListPatients extends Component {
   }
 
   renderList = () => {
-    return this.state.patients.map(({ name, last_name, _id }) => 
+    return this.state.histories.map(({ syntoms, disease, prescription, _id }) => 
       <li key={_id}>
-        {name} {last_name} <Link to={`/patients/${_id}`}><FaEdit />Edit</Link> 
+        {syntoms} {disease} {prescription} <Link to={`/historys/${_id}`}><FaEdit />Edit</Link> 
         <button onClick={() => this.handleDelete(_id)}><FaEraser/>Delete</button>
       </li>
     )
@@ -46,14 +47,14 @@ class ListPatients extends Component {
   render() {   
     return (
       <div id="private">
-        <h1>Listado de Pacientes</h1>
+        <h1>Historial Medico</h1>
         <ul>
           {this.state.isLoading ? <h1>Loading</h1> : this.renderList()} 
         </ul>
-        <FormCreatePatient />
+        <FormCreateHistory/>
       </div>
     )
   }
 }
 
-export default ListPatients;
+export default ListHistory;

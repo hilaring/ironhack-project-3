@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Api from '../lib/patients-service';
 import { withRouter } from "react-router-dom";
 
-
 class NewPatient extends Component {
 
   state = {
@@ -21,13 +20,12 @@ class NewPatient extends Component {
   }
 
   handleSubmit = (e) => {
-    console.log('button')
     e.preventDefault();
     //espera el objeto que le viene del body
     const { name, last_name, email, number, adress } = this.state
     Api.createPatient({ name, last_name, email, number, adress })
       .then((result) => {
-        console.log('done: ', result)
+        console.log('', result)
         //redirecciona al enviar
        this.props.history.push(`/`)
       })
@@ -38,6 +36,7 @@ class NewPatient extends Component {
     const { name, last_name, email, number, adress } = this.state
     return (
       <div>
+        <h1>Create Patient</h1>
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="">Name</label>
           <input type="text" value={name} name="name" onChange={this.handleOnChange} />
