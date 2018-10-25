@@ -21,7 +21,8 @@ class Api {
     }
 
     createPatient(body) {
-        return this.api.post('/patients', body);
+        console.log('hola')
+        return this.api.post(`/patients`, body);
     }
 
     deletePatient(id) {

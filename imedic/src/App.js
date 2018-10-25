@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, { Component, Fragment } from 'react';
+import { Router, Route, Switch } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
 import AnonRoute from './components/AnonRoute';
 import Navbar from './components/Navbar';
@@ -10,7 +10,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Title from './components/Title';
 import auth from './lib/auth-service';
-import './style/main.css'
+import './style/main.css';
 import './App.css';
 
 class App extends Component {
@@ -64,9 +64,9 @@ class App extends Component {
         return <div>Loading</div>
       default:
         return (
-          <div className="start-box">
-            <Title />
-            <Navbar isLogged={isLogged} user={user} logoutUser={this.logoutUser} />  
+            <Fragment>
+              <Title />
+              <Navbar isLogged={isLogged} user={user} logoutUser={this.logoutUser} />  
               <Switch>
                 <AnonRoute path="/signup" component={Signup} setUser={this.setUser} isLogged={isLogged} />
                 <AnonRoute path="/login" component={Login} setUser={this.setUser} isLogged={isLogged} />
@@ -74,9 +74,9 @@ class App extends Component {
                 <Route exact path='/' component={ListPatients}/>
                 <Route path='/patients/:id' component={DetailPatient}/>
               </Switch>
-              <br />
-          </div>
+            </Fragment>
         );
+        
     }
   }
 }

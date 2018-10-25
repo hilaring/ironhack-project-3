@@ -19,4 +19,11 @@
 
 .navbar {
     font-size: 18px;
+    margin:10px;
+    
 }
+
+
+#private{
+    text-align: center;
+  }
