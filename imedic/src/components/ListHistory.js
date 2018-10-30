@@ -16,8 +16,9 @@ class ListHistory extends Component {
     Api.deleteHistory(id)
       .then(()=> {
         // no funciona
-       //this.props.history.push('/')
-        this.getHistory()
+        //this.getHistory()
+       this.props.history.push('/')
+        window.location.reload()
       })
       .catch(error => console.log(error))
   }

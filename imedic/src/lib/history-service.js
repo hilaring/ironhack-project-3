@@ -22,7 +22,6 @@ class Api {
 
     createHistory(body) {
         console.log(body)
-        console.log("JODER PERE")
         return this.api.post(`/`, body);
     }
 

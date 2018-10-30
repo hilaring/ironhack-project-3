@@ -28,6 +28,7 @@ class NewHistory extends Component {
         console.log('', result)
         //redirecciona al enviar
        this.props.history.push(`/`)
+       window.location.reload()
       })
       .catch((error) => { console.log(error) })
   }
