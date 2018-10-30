@@ -86,7 +86,7 @@
 }
   /* links */
     
-/* css forms */
+/* css style forms */
 
   .register-title {
     width: 270px;
@@ -170,7 +170,7 @@
     color: black;
   }
 /* 
-  listado */
+ css style list */
 
   #lista2 {
     counter-reset: li; 
@@ -224,3 +224,5 @@
     border-radius: 2em;
     transition: all .3s ease-out;
 }
+
+/* Otras cosas */
