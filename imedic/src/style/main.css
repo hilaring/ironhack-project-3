@@ -70,6 +70,7 @@
   }
 
   #listp{
+    
     width: 30%;
     text-align: center;
   }
@@ -82,9 +83,9 @@
   background-color:#d7604b;
       color:white;
       margin:2px;
+      float: right;
 }
   /* links */
-
     
 /* css forms */
 
