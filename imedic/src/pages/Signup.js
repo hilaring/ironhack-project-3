@@ -42,25 +42,24 @@ class Signup extends Component {
   render() {
     const { username, name, lastname, email, password } = this.state;
     return (
-      <div>
-        <form onSubmit={this.handleFormSubmit}>
-          <label>Username:</label><br />
-          <input type="text" name="username" value={username} onChange={this.handleChange}/><br />
-          <label>Name:</label><br />
-          <input type="text" name="name" value={name} onChange={this.handleChange}/><br />
-          <label>Last name:</label><br />
-          <input type="text" name="lastname" value={lastname} onChange={this.handleChange}/><br />
-          <label>Email:</label><br />
-          <input type="email" name="email" value={email} onChange={this.handleChange}/><br />
-          <label>Password:</label><br />
-          <input type="password" name="password" value={password} onChange={this.handleChange} /><br />
-          <input type="submit" value="Signup" />
+      <div id="signup">
+      <h1 class="register-title">Welcome</h1>
+        <form onSubmit={this.handleFormSubmit} class="register">
+          
+          <input class="register-input" type="text" name="username" value={username} onChange={this.handleChange} placeholder="User Name"/><br />
+          
+          <input class="register-input" type="text" name="name" value={name} onChange={this.handleChange} placeholder="Name"/><br />
+          
+          <input class="register-input" type="text" name="lastname" value={lastname} onChange={this.handleChange} placeholder="Last Name"/><br />
+        
+          <input class="register-input" type="email" name="email" value={email} onChange={this.handleChange} placeholder="Email"/><br />
+     
+          <input class="register-input" type="password" name="password" value={password} onChange={this.handleChange} placeholder="Password"/><br />
+          <input class="register-button"type="submit" value="Signup" />
         </form>
-
-        <p>Already have account? 
+        <p id="signup">Already have account? 
           <Link to={"/login"}> Login</Link>
         </p>
-
       </div>
     )
   }

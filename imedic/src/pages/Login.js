@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import auth from '../lib/auth-service';
+import { Link } from 'react-router-dom';
 
 class Login extends Component {
   state = {
@@ -31,14 +32,18 @@ class Login extends Component {
   render() {
     const { username, password } = this.state;
     return (
-      <div>
-        <form onSubmit={this.handleFormSubmit}>
-          <label>Username:</label>
-          <input type="text" name="username" value={username} onChange={this.handleChange}/>
-          <label>Password:</label>
-          <input type="password" name="password" value={password} onChange={this.handleChange} />
-          <input type="submit" value="Login" />
+      <div id="login">
+      <h1 class="register-title">Welcome</h1>
+        <form onSubmit={this.handleFormSubmit} class="register">
+          <label></label>
+          <input  class="register-input" type="text" name="username" value={username} onChange={this.handleChange}placeholder="Username"/>
+          <label></label>
+          <input  class="register-input" type="password" name="password" value={password} onChange={this.handleChange} placeholder="Password"/>
+          <input class="register-button" type="submit" value="Login" />
         </form>
+        <p id="signup">Do not have account? 
+          <Link to={"/signup"}> Signup</Link>
+        </p>
       </div>
     )
   }
