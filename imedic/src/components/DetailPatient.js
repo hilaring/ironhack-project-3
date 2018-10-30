@@ -36,7 +36,7 @@ class DetailPatient extends Component {
         <p>{number}</p>
         <h3>Adress</h3>
         <p>{adress}</p>
-        <Link to="/">Back to home</Link>
+        <Link class="link" to="/">Back to home</Link>
         </div>
         <div id="listh">
           <ListHistory />

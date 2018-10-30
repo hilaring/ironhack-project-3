@@ -78,7 +78,20 @@
   #signup{
     text-align: center;
   }
+/* delete */
+.delete{
+  background-color:#d7604b;
+      color:white;
+      margin:2px;
+}
+  /* links */
 
+    a:link, a:visited, a:focus {
+      background-color:#d7604b;
+      color:white;
+    
+    }
+    
 /* css forms */
 
   .register-title {
