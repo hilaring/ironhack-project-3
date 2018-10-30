@@ -4,16 +4,16 @@ import Patients from '../lib/patients-service';
 import FormEditPatient from './FormEditPatient';
 import ListHistory from './ListHistory';
 
-class DetailPatient extends Component {  
+class DetailPatient extends Component {
   state = {
     patient: {},
     isLoading: true,
   }
 
   componentDidMount() {
-    const { id } = this.props.match.params; 
+    const { id } = this.props.match.params;
     Patients.getPatient(id)
-      .then(({data}) => {
+      .then(({ data }) => {
         this.setState({
           patient: data,
           isLoading: false,
@@ -22,7 +22,7 @@ class DetailPatient extends Component {
   }
 
   renderInfo = () => {
-    const { name, last_name, email,number,adress } = this.state.patient;
+    const { name, last_name, email, number, adress } = this.state.patient;
     return (
       <Fragment>
         <h3>Name</h3>
@@ -36,20 +36,23 @@ class DetailPatient extends Component {
         <h3>Adress</h3>
         <p>{adress}</p>
         <Link to="/">Back to home</Link>
-        < div id="private">
-        <h1>Edit Patient</h1>
-      <FormEditPatient />
-      <ListHistory />
+        <div id="listh">
+          <ListHistory />
         </div>
+        < div id="private">
+          <h1>Edit Patient</h1>
+          <FormEditPatient />
+        </ div>
+       
       </Fragment>
     );
   }
 
   render() {
-    
+
     return (
       <div>
-        { !this.state.isLoading ? this.renderInfo() : <div>Loading</div>}
+        {!this.state.isLoading ? this.renderInfo() : <div>Loading</div>}
       </div>
     )
   }
