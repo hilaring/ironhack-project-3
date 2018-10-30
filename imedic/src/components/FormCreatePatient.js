@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Api from '../lib/patients-service';
 import { withRouter } from "react-router-dom";
 
-className NewPatient extends Component {
+class NewPatient extends Component {
 
   state = {
     name: '',

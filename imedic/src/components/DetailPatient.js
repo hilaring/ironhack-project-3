@@ -30,7 +30,7 @@ class DetailPatient extends Component {
         < div id="privated">
           <FormEditPatient />
         </ div>
-        <Link class="link" to="/">Back to home</Link>
+        <Link className="link" to="/">Back to home</Link>
        
       </Fragment>
     );

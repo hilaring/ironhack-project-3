@@ -4,7 +4,7 @@ import { FaEdit, FaEraser } from 'react-icons/fa';
 import Api from '../lib/patients-service';
 import FormCreatePatient from './FormCreatePatient';
 
-className ListPatients extends Component {
+class ListPatients extends Component {
 
   state = {
     patients: [],

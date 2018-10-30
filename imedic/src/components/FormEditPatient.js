@@ -49,19 +49,19 @@ import { withRouter } from "react-router-dom";
     const { name, last_name, email, number, adress } = this.state
     return (
         <div>
-           <h1 class="register-title">Edit Patient</h1>
-          <form onSubmit={this.handleSubmit} class="register">
-            <label class="label" htmlFor="">Name</label>
-            <input class="register-input" type="text" value={name} name="name" onChange={this.handleOnChange} placeholder="Name"/>
-            <label class="label" htmlFor="">Last name</label>
-            <input class="register-input" type="text" value={last_name} name="last_name" onChange={this.handleOnChange} placeholder="Last Name"/>
-            <label class="label " htmlFor="">Email</label>
-            <input class="register-input" type="text" value={email} name="email" onChange={this.handleOnChange} placeholder="Email"/>
-            <label class="label" htmlFor="">Phone number</label>
-            <input class="register-input"  type="number" value={number} name="number" onChange={this.handleOnChange} placeholder="Number"/>
-            <label class="label" htmlFor="">Adress</label>
-            <input class="register-input" type="text" value={adress} name="adress" onChange={this.handleOnChange} placeholder="Adress" />
-            <input class="register-button" type="submit" value="Update" />
+           <h1 className="register-title">Edit Patient</h1>
+          <form onSubmit={this.handleSubmit} className="register">
+            <label className="label" htmlFor="">Name</label>
+            <input className="register-input" type="text" value={name} name="name" onChange={this.handleOnChange} placeholder="Name"/>
+            <label className="label" htmlFor="">Last name</label>
+            <input className="register-input" type="text" value={last_name} name="last_name" onChange={this.handleOnChange} placeholder="Last Name"/>
+            <label className="label " htmlFor="">Email</label>
+            <input className="register-input" type="text" value={email} name="email" onChange={this.handleOnChange} placeholder="Email"/>
+            <label className="label" htmlFor="">Phone number</label>
+            <input className="register-input"  type="number" value={number} name="number" onChange={this.handleOnChange} placeholder="Number"/>
+            <label className="label" htmlFor="">Adress</label>
+            <input className="register-input" type="text" value={adress} name="adress" onChange={this.handleOnChange} placeholder="Adress" />
+            <input className="register-button" type="submit" value="Update" />
           </form>
         </div>
     )
