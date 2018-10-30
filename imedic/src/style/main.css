@@ -40,6 +40,12 @@
 
 #private{
     background-color: pink;
+   
+}
+#privated{
+    background-color: pink;
+    width: 10%;
+    text-align: center;
 }
 
 * {
@@ -55,4 +61,10 @@
       float:right;
       margin-top: -450px;
       margin-right:100px;
+  }
+
+  #listp{
+    background-color: pink;
+    width: 30%;
+    text-align: center;
   }

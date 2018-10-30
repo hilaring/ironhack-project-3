@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { FaEdit ,FaEraser } from 'react-icons/fa';
+import { FaEdit, FaEraser } from 'react-icons/fa';
 import Api from '../lib/patients-service';
 import FormCreatePatient from './FormCreatePatient'
 
@@ -10,15 +10,15 @@ class ListPatients extends Component {
     patients: [],
     isLoading: true,
   }
-  
+
 
   handleDelete = (id) => {
     Api.deletePatient(id)
-      .then(()=> {
+      .then(() => {
         // no funciona
-       // this.getPatients()
+        // this.getPatients()
         this.props.history.push('/')
-        
+
         window.location.reload()
       })
       .catch(error => console.log(error))
@@ -27,32 +27,34 @@ class ListPatients extends Component {
 
   componentDidMount() {
     Api.getPatients()
-    .then((data) => {
+      .then((data) => {
         this.setState({
           patients: data,
           isLoading: false,
         })
       })
-      .catch((error) => console.log("Error: ", error)) 
+      .catch((error) => console.log("Error: ", error))
   }
 
   renderList = () => {
-    return this.state.patients.map(({ name, last_name, _id }) => 
+    return this.state.patients.map(({ name, last_name, _id }) =>
       <li key={_id}>
-        {name} {last_name} <Link to={`/patients/${_id}`}><FaEdit />Edit</Link> 
-        <button onClick={() => this.handleDelete(_id)}><FaEraser/>Delete</button>
+        {name} {last_name} <Link to={`/patients/${_id}`}><FaEdit />Edit</Link>
+        <button onClick={() => this.handleDelete(_id)}><FaEraser />Delete</button>
       </li>
     )
   }
 
-  render() {   
+  render() {
     return (
-      <div id="private">
+      <div id="listp">
         <h1>My patients</h1>
         <ul>
-          {this.state.isLoading ? <h1>Loading</h1> : this.renderList()} 
+          {this.state.isLoading ? <h1>Loading</h1> : this.renderList()}
         </ul>
-        <FormCreatePatient />
+
+          <FormCreatePatient />
+        
       </div>
     )
   }
