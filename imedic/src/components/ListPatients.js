@@ -4,7 +4,7 @@ import { FaEdit, FaEraser } from 'react-icons/fa';
 import Api from '../lib/patients-service';
 import FormCreatePatient from './FormCreatePatient';
 
-class ListPatients extends Component {
+className ListPatients extends Component {
 
   state = {
     patients: [],
@@ -40,7 +40,7 @@ class ListPatients extends Component {
     return this.state.patients.map(({ name, last_name, _id }) =>
       <li key={_id}>
         {name} {last_name} <Link to={`/patients/${_id}`}><FaEdit />Edit</Link>
-        <button class="delete" onClick={() => this.handleDelete(_id)}><FaEraser />Delete</button>
+        <button className="delete" onClick={() => this.handleDelete(_id)}><FaEraser />Delete</button>
       </li>
     )
   }
@@ -48,9 +48,9 @@ class ListPatients extends Component {
   render() {
     return (
       <div id="lista2">
-        <div class="content-box">
+        <div className="content-box">
         <ul>
-        <h1 class="register-title">My patients</h1>
+        <h1 className="register-title">My patients</h1>
           {this.state.isLoading ? <h1>Loading</h1> : this.renderList()}
         </ul>
         </div>
