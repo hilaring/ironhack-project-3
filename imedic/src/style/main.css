@@ -70,7 +70,6 @@
   }
 
   #listp{
-    
     width: 30%;
     text-align: center;
   }
@@ -86,11 +85,6 @@
 }
   /* links */
 
-    a:link, a:visited, a:focus {
-      background-color:#d7604b;
-      color:white;
-    
-    }
     
 /* css forms */
 
