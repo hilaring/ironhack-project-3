@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { FaEdit ,FaEraser } from 'react-icons/fa';
 import Api from '../lib/history-service';
-
+import FormCreateHistory from './FormCreateHistory';
 
 class ListHistory extends Component {
 
@@ -50,10 +50,11 @@ class ListHistory extends Component {
   render() {   
     return (
       <div id="private">
-        <h1>Historial Medico</h1>
+        <h1>Medical History</h1>
         <ul>
           {this.state.isLoading ? <h1>Loading</h1> : this.renderList()} 
         </ul>
+        <FormCreateHistory/>
       </div>
     )
   }
