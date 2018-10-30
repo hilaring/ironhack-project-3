@@ -22,28 +22,15 @@ class DetailPatient extends Component {
   }
 
   renderInfo = () => {
-    const { name, last_name, email, number, adress } = this.state.patient;
     return (
       <Fragment>
-        <div id="info">
-        <h3>Name</h3>
-        <p>{name}</p>
-        <h3>Last Name</h3>
-        <p>{last_name}</p>
-        <h3>Email</h3>
-        <p>{email}</p>
-        <h3>Phone Number</h3>
-        <p>{number}</p>
-        <h3>Adress</h3>
-        <p>{adress}</p>
-        <Link class="link" to="/">Back to home</Link>
-        </div>
         <div id="listh">
           <ListHistory />
         </div>
         < div id="privated">
           <FormEditPatient />
         </ div>
+        <Link class="link" to="/">Back to home</Link>
        
       </Fragment>
     );
