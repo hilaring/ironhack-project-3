@@ -20,15 +20,15 @@ class NewHistory extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     //espera el objeto que le viene del body
-    const { syntoms, disease, prescription} = this.state
+    const { _id, syntoms, disease, prescription} = this.state
     console.log('data', syntoms, disease, prescription)
 
-    Api.createHistory({ syntoms, disease, prescription })
+    Api.createHistory({ _id, syntoms, disease, prescription })
       .then((result) => {
         console.log('', result)
         //redirecciona al enviar
-       this.props.history.push(`/`)
-       window.location.reload()
+        this.props.history.push(`/`)
+        window.location.reload()
       })
       .catch((error) => { console.log(error) })
   }

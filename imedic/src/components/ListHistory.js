@@ -15,8 +15,7 @@ class ListHistory extends Component {
       .then(()=> {
         // no funciona
         //this.getHistory()
-       this.props.history.push('/')
-        window.location.reload()
+        this.props.history.push('/')
       })
       .catch(error => console.log(error))
   }

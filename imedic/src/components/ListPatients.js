@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { FaEdit, FaEraser } from 'react-icons/fa';
 import Api from '../lib/patients-service';
-import FormCreatePatient from './FormCreatePatient'
+import FormCreatePatient from './FormCreatePatient';
 
 class ListPatients extends Component {
 
@@ -48,13 +48,13 @@ class ListPatients extends Component {
   render() {
     return (
       <div id="lista2">
+        <div class="content-box">
         <h1 class="register-title">My patients</h1>
         <ul>
           {this.state.isLoading ? <h1>Loading</h1> : this.renderList()}
         </ul>
-
-          <FormCreatePatient />
-        
+        </div>
+        <FormCreatePatient/>
       </div>
     )
   }

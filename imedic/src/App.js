@@ -70,8 +70,8 @@ class App extends Component {
                 <AnonRoute path="/signup" component={Signup} setUser={this.setUser} isLogged={isLogged} />
                 <AnonRoute path="/login" component={Login} setUser={this.setUser} isLogged={isLogged} />
                 <PrivateRoute path="/private" component={Private} isLogged={isLogged} user={user} />
-                <Route exact path='/' component={ListPatients}/>
-                <Route path='/patients/:id' component={DetailPatient}/>
+                <PrivateRoute exact path='/' component={ListPatients} isLogged={isLogged} user={user}/>
+                <PrivateRoute path='/patients/:id' component={DetailPatient} isLogged={isLogged} user={user}/>
               </Switch>
             </Fragment>
         );
