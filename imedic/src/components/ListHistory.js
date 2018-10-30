@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { FaEdit ,FaEraser } from 'react-icons/fa';
 import Api from '../lib/history-service';
-import FormCreateHistory from './FormCreateHistory';
+
 
 class ListHistory extends Component {
 
@@ -54,7 +54,6 @@ class ListHistory extends Component {
         <ul>
           {this.state.isLoading ? <h1>Loading</h1> : this.renderList()} 
         </ul>
-        <FormCreateHistory/>
       </div>
     )
   }
