@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { FaEdit ,FaEraser } from 'react-icons/fa';
 import Api from '../lib/history-service';
 import FormCreateHistory from './FormCreateHistory';
 
@@ -39,9 +37,9 @@ class ListHistory extends Component {
   renderList = () => {
     return this.state.histories.map(({ _id, syntoms, disease, prescription }) => 
       <ul key={_id}>
-      <li>Síntomas: {syntoms}<br/></li>
-      <li>Enfermedad: {disease}<br/></li>
-      <li>Prescripción: {prescription}</li>
+      <li>Syntoms: {syntoms}<br/></li>
+      <li>Disease: {disease}<br/></li>
+      <li>Prescription: {prescription}</li>
       <hr/>
       </ul>
     )

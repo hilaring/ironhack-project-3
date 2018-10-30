@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+
 import styled from "styled-components";
 import { IoIosLogOut } from 'react-icons/io';
 import '../style/main.css';
@@ -42,6 +42,7 @@ export default class Navbar extends Component {
           </div>
         ) : (
           <div id="log">
+          
           </div>
         )}
       </Menu>
