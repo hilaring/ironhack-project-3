@@ -37,7 +37,7 @@ class NewPatient extends Component {
     const { name, last_name, email, number, adress } = this.state
     return (
       <div>
-        <h1 class="register-title">Create Patient</h1>
+        <h1 class="register-title " >Create Patient</h1>
         <form onSubmit={this.handleSubmit} class="register">
           <input class="register-input" type="text" value={name} name="name" onChange={this.handleOnChange} placeholder="Name" /><br></br>
           <input class="register-input" type="text" value={last_name} name="last_name" onChange={this.handleOnChange} placeholder="Last Name"/><br></br>

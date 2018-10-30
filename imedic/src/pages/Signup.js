@@ -46,7 +46,7 @@ class Signup extends Component {
       <h1 class="register-title">Welcome</h1>
         <form onSubmit={this.handleFormSubmit} class="register">
           
-          <input class="register-input" type="text" name="username" value={username} onChange={this.handleChange} placeholder="User Name"/><br />
+          <input class="register-input" type="text" name="username" value={username} onChange={this.handleChange} placeholder="Username"/><br />
           
           <input class="register-input" type="text" name="name" value={name} onChange={this.handleChange} placeholder="Name"/><br />
           

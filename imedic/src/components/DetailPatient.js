@@ -25,6 +25,7 @@ class DetailPatient extends Component {
     const { name, last_name, email, number, adress } = this.state.patient;
     return (
       <Fragment>
+        <div id="info">
         <h3>Name</h3>
         <p>{name}</p>
         <h3>Last Name</h3>
@@ -36,6 +37,7 @@ class DetailPatient extends Component {
         <h3>Adress</h3>
         <p>{adress}</p>
         <Link to="/">Back to home</Link>
+        </div>
         <div id="listh">
           <ListHistory />
         </div>
