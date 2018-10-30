@@ -27,6 +27,7 @@ class NewPatient extends Component {
       .then((result) => {
         console.log('', result)
         //redirecciona al enviar
+        
        this.props.history.push(`/`)
        window.location.reload()
       })
@@ -36,7 +37,11 @@ class NewPatient extends Component {
   render() {
     const { name, last_name, email, number, adress } = this.state
     return (
+<<<<<<< HEAD
       <div >
+=======
+      <div class="content-box">
+>>>>>>> dev
         <h1 class="register-title " >Create Patient</h1>
         <form onSubmit={this.handleSubmit} class="register">
           <input class="register-input" type="text" value={name} name="name" onChange={this.handleOnChange} placeholder="Name" /><br></br>
@@ -46,7 +51,7 @@ class NewPatient extends Component {
           <input class="register-input" type="text" value={adress} name="adress" onChange={this.handleOnChange} placeholder="Adress" /><br></br>
           <input class="register-button" type="submit" value="create"/><br></br>
         </form>
-      </div>
+        </div>
     )
   }
 }

@@ -39,8 +39,10 @@
 }
 
 #private{
-    margin-left: 10px;
+    /* margin-left: 10px;
     margin-bottom: 10px;
+     */
+     width: 100%;
 }
 #privated{
     
@@ -180,7 +182,13 @@
     margin-bottom: 4em;
     text-shadow: 0 1px 0 rgba(255,255,255,.5);
     width: 100%;
+<<<<<<< HEAD
     
+=======
+    background-color: goldenrod;
+    display: flex;
+    flex-direction: row;
+>>>>>>> dev
 }
 
 #lista2 ol {
@@ -198,6 +206,7 @@
     text-decoration: none;
     border-radius: .3em;
     transition: all .3s ease-out;   
+    background-color: goldenrod;
 }
 
 #lista2 li:hover{
@@ -226,5 +235,19 @@
     transition: all .3s ease-out;
 }
 
+<<<<<<< HEAD
 
 /* Otras cosas */
+=======
+#lista2 ul {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-box {
+  flex-direction: column;
+  width: 50%;
+  background-color: white;
+}
+>>>>>>> dev
