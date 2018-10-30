@@ -46,7 +46,7 @@ class ListPatients extends Component {
   render() {   
     return (
       <div id="private">
-        <h1>Listado de Pacientes</h1>
+        <h1>My patients</h1>
         <ul>
           {this.state.isLoading ? <h1>Loading</h1> : this.renderList()} 
         </ul>

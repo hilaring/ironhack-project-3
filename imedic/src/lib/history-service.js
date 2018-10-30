@@ -7,7 +7,7 @@ class Api {
         })
     }
 
-    gethistory() {
+    getHistories() {
         return this.api.get(`/`)
             .then(({ data }) => data);
     }

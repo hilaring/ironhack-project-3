@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Patients from '../lib/patients-service';
 import FormEditPatient from './FormEditPatient';
 import FormCreateHistory from './FormCreateHistory';
+import ListHistory from './ListHistory';
 
 class DetailPatient extends Component {  
   state = {
@@ -40,6 +41,7 @@ class DetailPatient extends Component {
         <h1>Edit Patient</h1>
       <FormEditPatient />
       <FormCreateHistory/>
+      <ListHistory />
         </div>
       </Fragment>
     );

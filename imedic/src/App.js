@@ -11,7 +11,6 @@ import Login from './pages/Login';
 import Title from './components/Title';
 import auth from './lib/auth-service';
 import './style/main.css';
-import './App.css';
 
 class App extends Component {
 
@@ -67,7 +66,7 @@ class App extends Component {
             <Fragment>
               <Title />
               <Navbar isLogged={isLogged} user={user} logoutUser={this.logoutUser} />  
-              <Switch>
+              <Switch className="test">
                 <AnonRoute path="/signup" component={Signup} setUser={this.setUser} isLogged={isLogged} />
                 <AnonRoute path="/login" component={Login} setUser={this.setUser} isLogged={isLogged} />
                 <PrivateRoute path="/private" component={Private} isLogged={isLogged} user={user} />

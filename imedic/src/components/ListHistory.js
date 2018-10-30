@@ -24,7 +24,7 @@ class ListHistory extends Component {
 
 
   componentDidMount() {
-    Api.getHistory()
+    Api.getHistories()
     .then((data) => {
       console.log(data)
         this.setState({
@@ -36,11 +36,13 @@ class ListHistory extends Component {
   }
 
   renderList = () => {
-    return this.state.histories.map(({ syntoms, disease, prescription, _id }) => 
-      <li key={_id}>
-        {syntoms} {disease} {prescription} <Link to={`/historys/${_id}`}><FaEdit />Edit</Link> 
-        <button onClick={() => this.handleDelete(_id)}><FaEraser/>Delete</button>
-      </li>
+    return this.state.histories.map(({ _id, syntoms, disease, prescription }) => 
+      <ul key={_id}>
+      <li>Síntomas: {syntoms}<br/></li>
+      <li>Enfermedad: {disease}<br/></li>
+      <li>Prescripción: {prescription}</li>
+      <hr/>
+      </ul>
     )
   }
 
