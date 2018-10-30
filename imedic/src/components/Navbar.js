@@ -25,9 +25,7 @@ export default class Navbar extends Component {
               <p className="name-navbar">Hi {name}!</p>
             </div>
             <div>
-              <a href="/login" class="w3-bar-item w3-button">
-                <i><IoIosLogOut className="icons" onClick={logoutUser}/></i>
-              </a>
+                <i><IoIosLogOut className="icons" onClick={logoutUser}/></i>            
             </div>
             <a href="/login" class="w3-bar-item w3-button">
               <i class="fa fa-search" />

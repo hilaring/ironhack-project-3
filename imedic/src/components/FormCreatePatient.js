@@ -47,7 +47,7 @@ class NewPatient extends Component {
           <input class="register-input" type="text" value={adress} name="adress" onChange={this.handleOnChange} placeholder="Adress" /><br></br>
           <input class="register-button" type="submit" value="create"/><br></br>
         </form>
-      </div>
+        </div>
     )
   }
 }
