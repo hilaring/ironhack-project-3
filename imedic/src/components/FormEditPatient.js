@@ -41,7 +41,6 @@ import { withRouter } from "react-router-dom";
     Api.editPatient(id, { name, last_name, email, number, adress })
       .then((result) => {
         this.props.history.push(`/`)
-        window.location.reload()
       })
       .catch((error) => { console.log(error) })
   }
