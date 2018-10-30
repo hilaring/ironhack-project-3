@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import styled from "styled-components";
 import { IoIosLogOut } from 'react-icons/io';
 import '../style/main.css';
