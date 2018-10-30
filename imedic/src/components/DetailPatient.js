@@ -40,7 +40,6 @@ class DetailPatient extends Component {
           <ListHistory />
         </div>
         < div id="privated">
-          <h1>Edit Patient</h1>
           <FormEditPatient />
         </ div>
        

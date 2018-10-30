@@ -38,12 +38,8 @@
     background-color: green;
 }
 
-#private{
-    background-color: pink;
-   
-}
 #privated{
-    background-color: pink;
+    
     width: 10%;
     text-align: center;
 }
@@ -64,13 +60,9 @@
   }
 
   #listp{
-    background-color: pink;
+    
     width: 30%;
     text-align: center;
-  }
-
-  #login{
-
   }
 
   #signup{
@@ -101,7 +93,7 @@
   }
   .register {
     margin: 0 auto;
-    width: 230px;
+    width: 500px;
     padding: 20px;
     background: #f4f4f4;
     border-radius: 3px;
@@ -154,3 +146,7 @@
     outline: 0;
   }
   
+  .label{
+    background-color: #e7e7e7; 
+    color: black;
+  }

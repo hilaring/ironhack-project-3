@@ -37,18 +37,14 @@ class NewPatient extends Component {
     const { name, last_name, email, number, adress } = this.state
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="">Name</label><br></br>
-          <input type="text" value={name} name="name" onChange={this.handleOnChange} /><br></br>
-          <label htmlFor="">Last name</label><br></br>
-          <input type="text" value={last_name} name="last_name" onChange={this.handleOnChange} /><br></br>
-          <label htmlFor="">Email</label><br></br>
-          <input type="text" value={email} name="email" onChange={this.handleOnChange} /><br></br>
-          <label htmlFor="">Phone number</label><br></br>
-          <input type="number" value={number} name="number" onChange={this.handleOnChange}/><br></br>
-          <label htmlFor="">Adress</label><br></br>
-          <input type="text" value={adress} name="adress" onChange={this.handleOnChange} /><br></br>
-          <input type="submit" value="create"/><br></br>
+        <h1 class="register-title">Create Patient</h1>
+        <form onSubmit={this.handleSubmit} class="register">
+          <input class="register-input" type="text" value={name} name="name" onChange={this.handleOnChange} placeholder="Name" /><br></br>
+          <input class="register-input" type="text" value={last_name} name="last_name" onChange={this.handleOnChange} placeholder="Last Name"/><br></br>
+          <input class="register-input" type="text" value={email} name="email" onChange={this.handleOnChange} placeholder="Email"/><br></br>
+          <input class="register-input" type="number" value={number} name="number" onChange={this.handleOnChange} placeholder="Number"/><br></br>
+          <input class="register-input" type="text" value={adress} name="adress" onChange={this.handleOnChange} placeholder="Adress" /><br></br>
+          <input class="register-button" type="submit" value="create"/><br></br>
         </form>
       </div>
     )
