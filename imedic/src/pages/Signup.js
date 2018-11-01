@@ -43,19 +43,19 @@ class Signup extends Component {
     const { username, name, lastname, email, password } = this.state;
     return (
       <div id="signup">
-      <h1 class="register-title">Welcome</h1>
-        <form onSubmit={this.handleFormSubmit} class="register">
+      <h1 className="register-title">Welcome</h1>
+        <form onSubmit={this.handleFormSubmit} className="register">
           
-          <input class="register-input" type="text" name="username" value={username} onChange={this.handleChange} placeholder="Username"/><br />
+          <input className="register-input" type="text" name="username" value={username} onChange={this.handleChange} placeholder="Username"/><br />
           
-          <input class="register-input" type="text" name="name" value={name} onChange={this.handleChange} placeholder="Name"/><br />
+          <input className="register-input" type="text" name="name" value={name} onChange={this.handleChange} placeholder="Name"/><br />
           
-          <input class="register-input" type="text" name="lastname" value={lastname} onChange={this.handleChange} placeholder="Last Name"/><br />
+          <input className="register-input" type="text" name="lastname" value={lastname} onChange={this.handleChange} placeholder="Last Name"/><br />
         
-          <input class="register-input" type="email" name="email" value={email} onChange={this.handleChange} placeholder="Email"/><br />
+          <input className="register-input" type="email" name="email" value={email} onChange={this.handleChange} placeholder="Email"/><br />
      
-          <input class="register-input" type="password" name="password" value={password} onChange={this.handleChange} placeholder="Password"/><br />
-          <input class="register-button"type="submit" value="Signup" />
+          <input className="register-input" type="password" name="password" value={password} onChange={this.handleChange} placeholder="Password"/><br />
+          <input className="register-button"type="submit" value="Signup" />
         </form>
         <p id="signup">Already have account? 
           <Link to={"/login"}> Login</Link>

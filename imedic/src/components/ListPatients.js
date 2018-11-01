@@ -40,7 +40,7 @@ class ListPatients extends Component {
     return this.state.patients.map(({ name, last_name, _id }) =>
       <li key={_id}>
         {name} {last_name} <Link to={`/patients/${_id}`}><FaEdit />Edit</Link>
-        <button class="delete" onClick={() => this.handleDelete(_id)}><FaEraser />Delete</button>
+        <button className="delete" onClick={() => this.handleDelete(_id)}><FaEraser />Delete</button>
       </li>
     )
   }

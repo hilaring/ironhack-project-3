@@ -28,6 +28,7 @@ class App extends Component {
   }
 
   logoutUser = () =>{
+    console.log('dentro logout')
     auth.logout()
       .then(() => {
         this.setState({ 

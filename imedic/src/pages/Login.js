@@ -33,13 +33,13 @@ class Login extends Component {
     const { username, password } = this.state;
     return (
       <div id="login">
-      <h1 class="register-title">Welcome</h1>
-        <form onSubmit={this.handleFormSubmit} class="register">
+      <h1 className="register-title">Welcome</h1>
+        <form onSubmit={this.handleFormSubmit} className="register">
           <label></label>
-          <input  class="register-input" type="text" name="username" value={username} onChange={this.handleChange}placeholder="Username"/>
+          <input  className="register-input" type="text" name="username" value={username} onChange={this.handleChange}placeholder="Username"/>
           <label></label>
-          <input  class="register-input" type="password" name="password" value={password} onChange={this.handleChange} placeholder="Password"/>
-          <input class="register-button" type="submit" value="Login" />
+          <input  className="register-input" type="password" name="password" value={password} onChange={this.handleChange} placeholder="Password"/>
+          <input className="register-button" type="submit" value="Login" />
         </form>
         <p id="signup">Do not have account? 
           <Link to={"/signup"}> Signup</Link>
