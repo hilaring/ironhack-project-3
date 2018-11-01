@@ -28,7 +28,7 @@ class NewPatient extends Component {
         console.log('', result)
         //redirecciona al enviar
         
-       this.props.history.push(`/`)
+       this.props.history.push(`/private`)
        window.location.reload()
       })
       .catch((error) => { console.log(error) })
@@ -37,15 +37,15 @@ class NewPatient extends Component {
   render() {
     const { name, last_name, email, number, adress } = this.state
     return (
-      <div className="content-box">
-        <h1 className="register-title " >Create Patient</h1>
-        <form onSubmit={this.handleSubmit} className="register">
+      <div className="register">
+        <h1 className="box-title">Create Patient</h1>
+        <form onSubmit={this.handleSubmit}>
           <input className="register-input" type="text" value={name} name="name" onChange={this.handleOnChange} placeholder="Name" /><br></br>
           <input className="register-input" type="text" value={last_name} name="last_name" onChange={this.handleOnChange} placeholder="Last Name"/><br></br>
           <input className="register-input" type="text" value={email} name="email" onChange={this.handleOnChange} placeholder="Email"/><br></br>
           <input className="register-input" type="number" value={number} name="number" onChange={this.handleOnChange} placeholder="Number"/><br></br>
           <input className="register-input" type="text" value={adress} name="adress" onChange={this.handleOnChange} placeholder="Adress" /><br></br>
-          <input className="register-button" type="submit" value="create"/><br></br>
+          <input className="register-button" type="submit" value="Create"/><br></br>
         </form>
         </div>
     )

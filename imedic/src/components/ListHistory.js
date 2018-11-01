@@ -35,10 +35,10 @@ class ListHistory extends Component {
 
   renderList = () => {
     return this.state.histories.map(({ _id, syntoms, disease, prescription }) => 
-      <ul key={_id}>
-      <li>Syntoms: {syntoms}<br/></li>
-      <li>Disease: {disease}<br/></li>
-      <li>Prescription: {prescription}</li>
+      <ul key={_id} className="list-history">
+      <li><strong>Syntoms:</strong> {syntoms}<br/></li>
+      <li><strong>Disease:</strong> {disease}<br/></li>
+      <li><strong>Prescription:</strong> {prescription}</li>
       <hr/>
       </ul>
     )

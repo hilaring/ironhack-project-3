@@ -1,112 +1,104 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500");
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700");
-
-.title-app {
-  /* padding-top: 40px;
-    padding-bottom: 20px; */
-  color: black;
-  text-align: center;
-  font-family: "Raleway", sans-serif;
-  font-weight: 300;
-  font-size: 40px;
-}
-
-.icons {
-  color: #f2f2f2;
-  background-color: #26272b;
-  font-size: 40px;
-  text-decoration: none;
-  text-align: center;
-}
-
-.name-navbar {
-  color: #f2f2f2;
-  background-color: #26272b;
-  font-size: 16px;
-  text-decoration: none;
-  text-align: center;
-}
-
-.nav-bar {
-  background-color: #26272b;
-  max-width: 40px;
-  height: 160px;
-  padding-top: 30px;
-}
-
-.nav-bar a {
-  text-decoration: none;
-}
-
-.text {
-  color: blue;
-  background-color: green;
-}
-
 #private {
-  /* margin-left: 10px;
-    margin-bottom: 10px;
-     */
-  width: 100vw;
+  width: 100%;
 }
-#privated {
-  width: 10%;
+
+#login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: row;
+}
+
+.patients-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.box-container {
+  width: 48%;
+}
+
+.box-title {
+  font-size: 28px;
   text-align: center;
-  margin-left: 10px;
+}
+
+/*List patients*/
+.list-history {
+    list-style: none;
+
+}
+
+/*List patients*/
+.list-patients ul {
+  margin: 0 30em 0 0;
+}
+
+.list-patients {
+  counter-reset: li;
+  list-style: none;
+  padding: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.list-patients li {
+  padding: 12px 0.4em 10px 0.4em;
+  margin-top: 2px;
   margin-bottom: 10px;
-}
-#info {
-  margin-left: 10px;
-}
-
-#listh {
-  float: right;
-  margin-right: 100px;
+  background: #ddd;
+  color: #444;
+  text-decoration: none;
+  border-radius: 0.3em;
+  transition: all 0.3s ease-out;
 }
 
-#listp {
-  width: 30%;
-  text-align: center;
+.li-button {
+    text-align: right;
 }
 
-#signup {
-  text-align: center;
-}
-/* delete */
 .delete {
-  background-color: #d7604b;
-  color: white;
-  margin: 2px;
-  float: right;
-}
-/* links */
+    color: black;
+    font-size: 12px;
+    float: right;
+  }
 
-/* css style forms */
+/*//////////////////////////////*/
 
-.register-title {
-  width: 270px;
-  line-height: 43px;
-  margin: 50px auto 20px;
-  font-size: 19px;
-  font-weight: 500;
-  color: white;
-  color: rgba(255, 255, 255, 0.95);
-  text-align: center;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-  background: #d7604b;
-  border-radius: 3px;
+#init-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
 }
 
-input {
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+.welcome-title {
+    display:flex;
+    justify-content: center;
+    align-content: middle;
 }
+
+.init-form {
+    width: 400px;
+    margin: auto;
+    padding: 10px;
+    background: #f4f4f4;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1),
+        0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);  
+}
+
 .register {
-  margin: 0 20px;
+  margin: 20px 20px;
   padding: 20px;
   background: #f4f4f4;
   border-radius: 3px;
@@ -124,7 +116,9 @@ input {
   background: none;
   border: 0;
   border-bottom: 1px solid #d8d8d8;
+  font-size: 16px;
 }
+
 .register-input:focus {
   border-color: goldenrod;
   outline: 0;
@@ -158,92 +152,4 @@ input {
 }
 .register-button:focus {
   outline: 0;
-}
-
-.label {
-  background-color: #e7e7e7;
-  color: black;
-}
-/* 
- css style list */
-
-#lista2 {
-  counter-reset: li;
-  list-style: none;
-  *list-style: decimal;
-  font: 15px "trebuchet MS", "lucida sans";
-  padding: 0;
-  margin-bottom: 4em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  width: 100%;
-  background-color: goldenrod;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-#lista2 ol {
-  margin: 0 30em 0 0;
-}
-
-#lista2 li {
-  position: relative;
-  display: block;
-  padding: 0.4em 0.4em 0.4em 2em;
-  *padding: 0.4em;
-  margin: 0.2em 2em;
-  background: #ddd;
-  color: #444;
-  text-decoration: none;
-  border-radius: 0.3em;
-  transition: all 0.3s ease-out;
-  background-color: goldenrod;
-}
-
-#lista2 li:hover {
-  background: #eee;
-}
-
-#lista2 li:hover:before {
-  transform: rotate(360deg);
-}
-
-#lista2 li:before {
-  content: counter(li);
-  counter-increment: li;
-  position: absolute;
-  left: -1.3em;
-  top: 50%;
-  margin-top: -1.3em;
-  background: goldenrod;
-  height: 2em;
-  width: 2em;
-  line-height: 2em;
-  border: 0.3em solid #fff;
-  text-align: center;
-  font-weight: bold;
-  border-radius: 2em;
-  transition: all 0.3s ease-out;
-}
-
-#lista2 ul {
-  background-color: #f4f4f4;
-  display: flex;
-  flex-direction: column;
-}
-
-.content-box {
-  flex-direction: column;
-  width: 50%;
-  background-color: white;
-}
-
-.contenedor {
-  display: flex;
-  flex-direction: row,
-}
-
-.patients-box {
-  border: 3px solid grey;
-  margin: 0 20px;
 }

@@ -29,8 +29,8 @@ export default class Navbar extends Component {
                 <i><IoIosLogOut className="icons" onClick={logoutUser}/></i>            
             </div>
           </div>
-        ) : (
-          <div id="log">
+          ) : (
+          <div>
             
           </div>
         )}

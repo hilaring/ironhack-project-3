@@ -24,14 +24,15 @@ class DetailPatient extends Component {
   renderInfo = () => {
     return (
       <Fragment>
-        <div id="listh">
-          <ListHistory />
+        <div className="patients-container">
+          <div className="register">
+            <ListHistory />
+          </div>
+          <div id="privated">
+            <FormEditPatient />
+          </ div>
+          <Link className="link" to="/private">Back to home</Link>
         </div>
-        < div id="privated">
-          <FormEditPatient />
-        </ div>
-        <Link className="link" to="/">Back to home</Link>
-       
       </Fragment>
     );
   }
