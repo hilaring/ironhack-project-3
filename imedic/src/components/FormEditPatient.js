@@ -40,7 +40,8 @@ import { withRouter } from "react-router-dom";
     const { name, last_name, email,number,adress } = this.state
     Api.editPatient(id, { name, last_name, email, number, adress })
       .then((result) => {
-        this.props.history.push(`/`)
+        this.props.history.push(`/patients/${id}`)
+        window.location.reload();
       })
       .catch((error) => { console.log(error) })
   }

@@ -1,244 +1,155 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700');
-
-.title-app {
-    /* padding-top: 40px;
-    padding-bottom: 20px; */
-    color: black;
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-    font-size: 40px;
+#private {
+  width: 100%;
 }
 
-
-.icons {
-    color: #f2f2f2;
-    background-color: #26272B;
-    font-size: 40px;
-    text-decoration: none;
-    text-align: center;
-}
-
-.name-navbar {
-    color: #f2f2f2;
-    background-color: #26272B;
-    font-size: 16px;
-    text-decoration: none;
-    text-align: center;
-}
-
-.nav-bar {
-    background-color: #26272B;
-    max-width: 40px;
-}
-
-.text {
-    color: blue;
-    background-color: green;
-}
-
-#private{
-    /* margin-left: 10px;
-    margin-bottom: 10px;
-     */
-     width: 100%;
-}
-#privated{
-    
-    width: 10%;
-    text-align: center;
-    margin-left: 10px;
-    margin-bottom: 10px;
-}
-#info{
-  margin-left: 10px;
-}
-
-* {
-    background-color: goldenrod;
-  }
-  
-  /* p {
-    height: 65px;
-    border: 1px solid white;
-  } */
-
-  #listh{
-      float:right;
-      margin-right:100px;
-      
-  }
-
-  #listp{
-    width: 30%;
-    text-align: center;
-  }
-
-  #signup{
-    text-align: center;
-  }
-/* delete */
-.delete{
-  background-color:#d7604b;
-      color:white;
-      margin:2px;
-      float: right;
-}
-  /* links */
-    
-/* css style forms */
-
-  .register-title {
-    width: 270px;
-    line-height: 43px;
-    margin: 50px auto 20px;
-    font-size: 19px;
-    font-weight: 500;
-    color: white;
-    color: rgba(255, 255, 255, 0.95);
-    text-align: center;
-    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-    background: #d7604b;
-    border-radius: 3px;
-  }
-
-  input {
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  .register {
-    margin: 0 auto;
-    width: 500px;
-    padding: 20px;
-    background: #f4f4f4;
-    border-radius: 3px;
-    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
-  }
-  
-  .register-input {
-    display: block;
-    width: 100%;
-    height: 38px;
-    margin-top: 2px;
-    font-weight: 500;
-    background: none;
-    border: 0;
-    border-bottom: 1px solid #d8d8d8;
-  }
-  .register-input:focus {
-    border-color: goldenrod;
-    outline: 0;
-  }
-
-  .register-button {
-    display: block;
-    width: 100%;
-    height: 42px;
-    margin-top: 25px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #494d59;
-    text-align: center;
-    text-shadow: 0 1px rgba(255, 255, 255, 0.5);
-    background: #fcfcfc;
-    border: 1px solid;
-    border-color: #d8d8d8 #d1d1d1 #c3c3c3;
-    border-radius: 2px;
-    cursor: pointer;
-  }
-  .register-button:active {
-    background: #eee;
-    border-color: #c3c3c3 #d1d1d1 #d8d8d8;
-    background-image: -webkit-linear-gradient(top, #eeeeee, #fcfcfc);
-    background-image: -moz-linear-gradient(top, #eeeeee, #fcfcfc);
-    background-image: -o-linear-gradient(top, #eeeeee, #fcfcfc);
-    background-image: linear-gradient(to bottom, #eeeeee, #fcfcfc);
-    -webkit-box-shadow: inset 0 1px rgba(0, 0, 0, 0.03);
-    box-shadow: inset 0 1px rgba(0, 0, 0, 0.03);
-  }
-  .register-button:focus {
-    outline: 0;
-  }
-  
-  .label{
-    background-color: #e7e7e7; 
-    color: black;
-  }
-/* 
- css style list */
-
-  #lista2 {
-    counter-reset: li; 
-    list-style: none; 
-    *list-style: decimal; 
-    font: 15px 'trebuchet MS', 'lucida sans';
-    padding: 0;
-    margin-bottom: 4em;
-    text-shadow: 0 1px 0 rgba(255,255,255,.5);
-    width: 100%;
-    background-color: goldenrod;
+#login {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
 }
 
-#lista2 ol {
-    margin: 0 30em 0 0; 
+.contenedor {
+  display: flex;
+  flex-direction: row;
 }
 
-#lista2 li{
-    position: relative;
-    display: block;
-    padding: .4em .4em .4em 2em;
-    *padding: .4em;
-    margin: .2em 2em;
-    background: #ddd;
-    color: #444;
-    text-decoration: none;
-    border-radius: .3em;
-    transition: all .3s ease-out;   
-    background-color: goldenrod;
+.patients-container {
+  display: flex;
+  flex-direction: row;
 }
 
-#lista2 li:hover{
-    background: #eee;
+.box-container {
+  width: 48%;
 }
 
-#lista2 li:hover:before{
-    transform: rotate(360deg);  
+.box-title {
+  font-size: 28px;
+  text-align: center;
 }
 
-#lista2 li:before{
-    content: counter(li);
-    counter-increment: li;
-    position: absolute; 
-    left: -1.3em;
-    top: 50%;
-    margin-top: -1.3em;
-    background: goldenrod;
-    height: 2em;
-    width: 2em;
-    line-height: 2em;
-    border: .3em solid #fff;
-    text-align: center;
-    font-weight: bold;
-    border-radius: 2em;
-    transition: all .3s ease-out;
+/*List patients*/
+.list-history {
+    list-style: none;
+
 }
 
-#lista2 ul {
-  /* background-color: white; */
+/*List patients*/
+.list-patients ul {
+  margin: 0 30em 0 0;
+}
+
+.list-patients {
+  counter-reset: li;
+  list-style: none;
+  padding: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  font-size: 16px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
-.content-box {
-  flex-direction: column;
-  width: 50%;
-  /* background-color: white; */
+.list-patients li {
+  padding: 12px 0.4em 10px 0.4em;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  background: #ddd;
+  color: #444;
+  text-decoration: none;
+  border-radius: 0.3em;
+  transition: all 0.3s ease-out;
+}
+
+.li-button {
+    text-align: right;
+}
+
+.delete {
+    color: black;
+    font-size: 12px;
+    float: right;
+  }
+
+/*//////////////////////////////*/
+
+#init-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.welcome-title {
+    display:flex;
+    justify-content: center;
+    align-content: middle;
+}
+
+.init-form {
+    width: 400px;
+    margin: auto;
+    padding: 10px;
+    background: #f4f4f4;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1),
+        0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);  
+}
+
+.register {
+  margin: 20px 20px;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.register-input {
+  display: block;
+  width: 100%;
+  height: 38px;
+  margin-top: 2px;
+  font-weight: 500;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #d8d8d8;
+  font-size: 16px;
+}
+
+.register-input:focus {
+  border-color: goldenrod;
+  outline: 0;
+}
+
+.register-button {
+  display: block;
+  width: 100%;
+  height: 42px;
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #494d59;
+  text-align: center;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  background: #fcfcfc;
+  border: 1px solid;
+  border-color: #d8d8d8 #d1d1d1 #c3c3c3;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.register-button:active {
+  background: #eee;
+  border-color: #c3c3c3 #d1d1d1 #d8d8d8;
+  background-image: -webkit-linear-gradient(top, #eeeeee, #fcfcfc);
+  background-image: -moz-linear-gradient(top, #eeeeee, #fcfcfc);
+  background-image: -o-linear-gradient(top, #eeeeee, #fcfcfc);
+  background-image: linear-gradient(to bottom, #eeeeee, #fcfcfc);
+  -webkit-box-shadow: inset 0 1px rgba(0, 0, 0, 0.03);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.03);
+}
+.register-button:focus {
+  outline: 0;
 }
