@@ -48,11 +48,13 @@ class ListPatients extends Component {
   render() {
     return (
       <div id="lista2">
-        <div class="content-box">
-        <h1 class="register-title">My patients</h1>
-        <ul>
-          {this.state.isLoading ? <h1>Loading</h1> : this.renderList()}
-        </ul>
+        <div className="content-box">
+        <h1 className="register-title">My patients</h1>
+        <div className="register">
+          <ul>
+            {this.state.isLoading ? <h1>Loading</h1> : this.renderList()}
+          </ul>
+        </div>
         </div>
         <FormCreatePatient/>
       </div>

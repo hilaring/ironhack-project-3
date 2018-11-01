@@ -10,7 +10,8 @@ const Menu = styled.div`
   background: #26272B;
   border: none;
   max-width: 50px;
-  height: 100%;
+  height: 95vh;
+  width: 60px;
 `;
 
 export default class Navbar extends Component {
@@ -26,22 +27,13 @@ export default class Navbar extends Component {
             </div>
             <div>
               <a href="/login" class="w3-bar-item w3-button">
-                <i><IoIosLogOut className="icons" onClick={logoutUser}/></i>
+                <IoIosLogOut className="icons" onClick={logoutUser}/>
               </a>
             </div>
-            <a href="/login" class="w3-bar-item w3-button">
-              <i class="fa fa-search" />
-            </a>
-            <a href="/login" class="w3-bar-item w3-button">
-              <i class="fa fa-envelope" />
-            </a>
-            <a href="/login" class="w3-bar-item w3-button">
-              <i class="fa fa-globe" />
-            </a>
           </div>
         ) : (
           <div id="log">
-          
+            
           </div>
         )}
       </Menu>

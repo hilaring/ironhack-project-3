@@ -65,7 +65,8 @@ class App extends Component {
         return (
             <Fragment>
               <Title />
-              <Navbar isLogged={isLogged} user={user} logoutUser={this.logoutUser} />  
+              <div className="contenedor">
+              <PrivateRoute path="/private" component={Navbar} isLogged={isLogged} user={user} logoutUser={this.logoutUser} />  
               <Switch className="test">
                 <AnonRoute path="/signup" component={Signup} setUser={this.setUser} isLogged={isLogged} />
                 <AnonRoute path="/login" component={Login} setUser={this.setUser} isLogged={isLogged} />
@@ -73,6 +74,7 @@ class App extends Component {
                 <PrivateRoute exact path='/' component={ListPatients} isLogged={isLogged} user={user}/>
                 <PrivateRoute path='/patients/:id' component={DetailPatient} isLogged={isLogged} user={user}/>
               </Switch>
+              </div>
             </Fragment>
         );
         
