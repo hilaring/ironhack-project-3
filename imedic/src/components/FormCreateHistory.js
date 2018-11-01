@@ -27,7 +27,7 @@ class NewHistory extends Component {
       .then((result) => {
         console.log('', result)
         //redirecciona al enviar
-        this.props.history.push(`/`)
+        this.props.history.push(`/private`)
         
       })
       .catch((error) => { console.log(error) })
