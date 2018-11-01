@@ -23,7 +23,6 @@ class ListPatients extends Component {
       .catch(error => console.log(error))
   }
 
-
   componentDidMount() {
     Api.getPatients()
       .then((data) => {
