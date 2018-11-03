@@ -13,7 +13,7 @@ class FormEditPatient extends Component {
   }
 
   componentDidMount() {
-    //una vez montado el componente pido los datos
+    // pido los datos
     const { id } = this.props.match.params;
     Api.getPatient(id)
       .then(({ data }) => {

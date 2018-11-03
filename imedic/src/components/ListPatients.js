@@ -14,8 +14,6 @@ class ListPatients extends Component {
   handleDelete = (id) => {
     Api.deletePatient(id)
       .then(() => {
-        // no funciona
-        // this.getPatients()
         this.props.history.push('/')
         window.location.reload()
       })

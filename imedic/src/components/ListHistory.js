@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Api from '../lib/history-service';
 import FormCreateHistory from './FormCreateHistory';
 const moment = require('moment');
-moment().format();
 
 class ListHistory extends Component {
 
@@ -15,8 +14,6 @@ class ListHistory extends Component {
   handleDelete = (id) => {
     Api.deleteHistory(id)
       .then(() => {
-        // no funciona
-        //this.getHistory()
         this.props.history.push('/')
       })
       .catch(error => console.log(error))
@@ -39,7 +36,7 @@ class ListHistory extends Component {
   renderList = () => {
     return this.state.histories.map(({ _id, created_at, syntoms, disease, prescription }) =>
       <ul key={_id} className="list-history">
-        <li><strong>Visit:</strong>{moment(created_at).format('MMMM Do, YYYY')}</li>
+        <li><strong>Visit:</strong>{moment(created_at).format(' MMMM Do, YYYY .')}</li>
         <li><strong>Syntoms:</strong> {syntoms}<br /></li>
         <li><strong>Disease:</strong> {disease}<br /></li>
         <li><strong>Prescription:</strong> {prescription}</li>

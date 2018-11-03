@@ -4,7 +4,6 @@ import PrivateRoute from './components/PrivateRoute';
 import AnonRoute from './components/AnonRoute';
 import Navbar from './components/Navbar';
 import DetailPatient from './components/DetailPatient';
-//import ListPatients from './components/ListPatients';
 import Private from './pages/Private';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
@@ -71,7 +70,6 @@ class App extends Component {
                 <AnonRoute path="/signup" component={Signup} setUser={this.setUser} isLogged={isLogged} />
                 <AnonRoute path="/login" component={Login} setUser={this.setUser} isLogged={isLogged} />
                 <PrivateRoute exact path="/" component={Private} isLogged={isLogged} user={user} />
-                {/* <PrivateRoute exact path='/' component={ListPatients} isLogged={isLogged} user={user}/> */}
                 <PrivateRoute path='/patients/:id' component={DetailPatient} isLogged={isLogged} user={user}/>
               </Switch>
               </div>
