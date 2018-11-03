@@ -25,13 +25,17 @@ class DetailPatient extends Component {
     return (
       <Fragment>
         <div className="patients-container">
+          <div className="box-containter">
+            <div className="register">
+            <FormEditPatient />
+            </div>
+          </div>
+        </div>
+        <div className="patients-container">
           <div className="register">
             <ListHistory />
           </div>
-          <div id="privated">
-            <FormEditPatient />
-          </ div>
-          <Link className="link" to="/">Back to home</Link>
+          {/* <Link className="link" to="/">Back to home</Link> */}
         </div>
       </Fragment>
     );

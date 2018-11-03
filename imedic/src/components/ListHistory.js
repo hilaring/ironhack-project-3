@@ -39,7 +39,7 @@ class ListHistory extends Component {
   renderList = () => {
     return this.state.histories.map(({ _id, created_at, syntoms, disease, prescription }) =>
       <ul key={_id} className="list-history">
-        <li>{moment(created_at).format(' Do-MMMM-YYYY')}</li>
+        <li><strong>Visit:</strong> {moment(created_at).format(' Do-MMMM-YYYY')}</li>
         <li><strong>Syntoms:</strong> {syntoms}<br /></li>
         <li><strong>Disease:</strong> {disease}<br /></li>
         <li><strong>Prescription:</strong> {prescription}</li>
@@ -50,14 +50,12 @@ class ListHistory extends Component {
 
   render() {
     return (
-      <div className="patients-container">
-        <div className="box-container">
-          <div>
-            <h1 className="register-title">Medical History</h1>
+      <div>
+        <div>
+            <h1 className="box-title">Medical History</h1>
               <ul>
                 {this.state.isLoading ? <h1>Loading</h1> : this.renderList()} 
               </ul>
-            </div>
         </div>
         <FormCreateHistory/>
       </div>
