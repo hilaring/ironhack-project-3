@@ -36,9 +36,9 @@ class NewHistory extends Component {
   render() {
     const { syntoms, disease, prescription } = this.state
     return (
-      <div>
-       <h1 className="register-title">Create History</h1>
-        <form onSubmit={this.handleSubmit} className="register">
+      <div className="register">
+       <h1 className="box-title">Create History</h1>
+        <form onSubmit={this.handleSubmit}>
           <input className="register-input" type="text" value={syntoms} name="syntoms" onChange={this.handleOnChange} placeholder="Syntoms"/>
           <input className="register-input" type="text" value={disease} name="disease" onChange={this.handleOnChange} placeholder="Disease"/>
           <input className="register-input" type="text" value={prescription} name="prescription" onChange={this.handleOnChange} placeholder="Prescription"/>
