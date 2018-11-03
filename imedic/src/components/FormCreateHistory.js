@@ -12,21 +12,18 @@ class NewHistory extends Component {
 
   handleOnChange = (e) => {
     this.setState({
-      //seleccionar dinamicamente que coges y cual es su valor
       [e.target.name]: e.target.value,
     })
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
-    //espera el objeto que le viene del body
     const { _id, syntoms, disease, prescription } = this.state
     console.log('data', syntoms, disease, prescription)
 
     Api.createHistory({ _id, syntoms, disease, prescription })
       .then((result) => {
         console.log('', result)
-        //redirecciona al enviar
         this.props.history.push(`/`)
 
       })

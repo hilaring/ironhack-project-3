@@ -35,9 +35,7 @@ class Login extends Component {
       <div id="init-box">
       <h1 className="welcome-title">Welcome</h1>
         <form onSubmit={this.handleFormSubmit} className="init-form">
-          <label></label>
           <input  className="register-input" type="text" name="username" value={username} onChange={this.handleChange}placeholder="Username"/>
-          <label></label>
           <input  className="register-input" type="password" name="password" value={password} onChange={this.handleChange} placeholder="Password"/>
           <input className="register-button" type="submit" value="Login" />
         </form>

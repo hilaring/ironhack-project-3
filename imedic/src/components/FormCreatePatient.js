@@ -14,20 +14,16 @@ class NewPatient extends Component {
 
   handleOnChange = (e) => {
     this.setState({
-      //seleccionar dinamicamente que coges y cual es su valor
       [e.target.name]: e.target.value,
     })
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
-    //espera el objeto que le viene del body
     const { name, last_name, email, number, adress } = this.state
     Api.createPatient({ name, last_name, email, number, adress })
       .then((result) => {
         console.log('', result)
-        //redirecciona al enviar
-
         this.props.history.push(`/private`)
         window.location.reload()
       })
