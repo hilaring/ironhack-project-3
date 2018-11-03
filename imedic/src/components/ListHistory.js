@@ -38,7 +38,7 @@ class ListHistory extends Component {
   renderList = () => {
     return this.state.histories.map(({ _id, created_at, syntoms, disease, prescription }) =>
       <ul key={_id} className="list-history">
-        <li>{moment(created_at).format(' Do-MMMM-YYYY')}</li>
+        <li>{moment(created_at).format('MMMM Do, YYYY')}</li>
         <li><strong>Syntoms:</strong> {syntoms}<br /></li>
         <li><strong>Disease:</strong> {disease}<br /></li>
         <li><strong>Prescription:</strong> {prescription}</li>
