@@ -71,7 +71,7 @@ class App extends Component {
               <Switch className="test">
                 <AnonRoute path="/signup" component={Signup} setUser={this.setUser} isLogged={isLogged} />
                 <AnonRoute path="/login" component={Login} setUser={this.setUser} isLogged={isLogged} />
-                <PrivateRoute path="/" component={Private} isLogged={isLogged} user={user} />
+                <PrivateRoute exact path="/" component={Private} isLogged={isLogged} user={user} />
                 {/* <PrivateRoute exact path='/' component={ListPatients} isLogged={isLogged} user={user}/> */}
                 <PrivateRoute path='/patients/:id' component={DetailPatient} isLogged={isLogged} user={user}/>
               </Switch>
