@@ -52,7 +52,7 @@ class Signup extends Component {
           <input className="register-input" type="password" name="password" value={password} onChange={this.handleChange} placeholder="Password"/><br />
           <input className="register-button"type="submit" value="Signup" />
         </form>
-        <p id="signup">Already have account? 
+        <p className="init-form">Already have account? 
           <Link to={"/login"}> Login</Link>
         </p>
       </div>

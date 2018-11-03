@@ -39,7 +39,7 @@ class Login extends Component {
           <input  className="register-input" type="password" name="password" value={password} onChange={this.handleChange} placeholder="Password"/>
           <input className="register-button" type="submit" value="Login" />
         </form>
-        <p id="signup">Do not have account? 
+        <p className="init-form">Do not have account? 
           <Link to={"/signup"}> Signup</Link>
         </p>
       </div>
