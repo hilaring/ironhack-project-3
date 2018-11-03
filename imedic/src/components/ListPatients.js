@@ -38,7 +38,7 @@ class ListPatients extends Component {
       <li key={_id}>
         {name} {last_name}
         <button className="delete" onClick={() => this.handleDelete(_id)}><FaTrash /></button>
-        <button className="delete"><Link to={`/patients/${_id}`}><FaRegEye/></Link></button>
+        <button className="delete"><Link to={`/patients/${_id}`}><FaRegEye /></Link></button>
       </li>
     )
   }
@@ -55,7 +55,7 @@ class ListPatients extends Component {
           </div>
         </div>
         <div className="box-container">
-          <FormCreatePatient/>
+          <FormCreatePatient />
         </div>
       </div>
     )

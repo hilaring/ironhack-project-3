@@ -8,11 +8,11 @@ class ListHistory extends Component {
     histories: [],
     isLoading: true,
   }
-  
+
 
   handleDelete = (id) => {
     Api.deleteHistory(id)
-      .then(()=> {
+      .then(() => {
         // no funciona
         //this.getHistory()
         this.props.history.push('/')
@@ -23,35 +23,35 @@ class ListHistory extends Component {
 
   componentDidMount() {
     Api.getHistories()
-    .then((data) => {
-      console.log(data)
+      .then((data) => {
+        console.log(data)
         this.setState({
           histories: data,
           isLoading: false,
         })
       })
-      .catch((error) => console.log("Error: ", error)) 
+      .catch((error) => console.log("Error: ", error))
   }
 
   renderList = () => {
-    return this.state.histories.map(({ _id, syntoms, disease, prescription }) => 
+    return this.state.histories.map(({ _id, syntoms, disease, prescription }) =>
       <ul key={_id} className="list-history">
-      <li><strong>Syntoms:</strong> {syntoms}<br/></li>
-      <li><strong>Disease:</strong> {disease}<br/></li>
-      <li><strong>Prescription:</strong> {prescription}</li>
-      <hr/>
+        <li><strong>Syntoms:</strong> {syntoms}<br /></li>
+        <li><strong>Disease:</strong> {disease}<br /></li>
+        <li><strong>Prescription:</strong> {prescription}</li>
+        <hr />
       </ul>
     )
   }
 
-  render() {   
+  render() {
     return (
       <div id="private">
         <h1 className="register-title">Medical History</h1>
         <ul>
-          {this.state.isLoading ? <h1>Loading</h1> : this.renderList()} 
+          {this.state.isLoading ? <h1>Loading</h1> : this.renderList()}
         </ul>
-        <FormCreateHistory/>
+        <FormCreateHistory />
       </div>
     )
   }

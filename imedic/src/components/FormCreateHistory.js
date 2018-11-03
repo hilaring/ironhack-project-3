@@ -20,7 +20,7 @@ class NewHistory extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     //espera el objeto que le viene del body
-    const { _id, syntoms, disease, prescription} = this.state
+    const { _id, syntoms, disease, prescription } = this.state
     console.log('data', syntoms, disease, prescription)
 
     Api.createHistory({ _id, syntoms, disease, prescription })
@@ -28,7 +28,7 @@ class NewHistory extends Component {
         console.log('', result)
         //redirecciona al enviar
         this.props.history.push(`/`)
-        
+
       })
       .catch((error) => { console.log(error) })
   }
@@ -37,12 +37,12 @@ class NewHistory extends Component {
     const { syntoms, disease, prescription } = this.state
     return (
       <div>
-       <h1 className="register-title">Create History</h1>
+        <h1 className="register-title">Create History</h1>
         <form onSubmit={this.handleSubmit} className="register">
-          <input className="register-input" type="text" value={syntoms} name="syntoms" onChange={this.handleOnChange} placeholder="Syntoms"/>
-          <input className="register-input" type="text" value={disease} name="disease" onChange={this.handleOnChange} placeholder="Disease"/>
-          <input className="register-input" type="text" value={prescription} name="prescription" onChange={this.handleOnChange} placeholder="Prescription"/>
-           <input className="register-button" type="submit" value="create"/>
+          <input className="register-input" type="text" value={syntoms} name="syntoms" onChange={this.handleOnChange} placeholder="Syntoms" />
+          <input className="register-input" type="text" value={disease} name="disease" onChange={this.handleOnChange} placeholder="Disease" />
+          <input className="register-input" type="text" value={prescription} name="prescription" onChange={this.handleOnChange} placeholder="Prescription" />
+          <input className="register-button" type="submit" value="create" />
         </form>
       </div>
     )
