@@ -37,7 +37,7 @@
 /*List patients*/
 .list-patients ul {
   margin: 0 30em 0 0;
-}
+} 
 
 .list-patients {
   counter-reset: li;
