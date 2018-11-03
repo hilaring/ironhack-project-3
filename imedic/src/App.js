@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
 import AnonRoute from './components/AnonRoute';
 import Navbar from './components/Navbar';
 import DetailPatient from './components/DetailPatient';
-import ListPatients from './components/ListPatients';
+//import ListPatients from './components/ListPatients';
 import Private from './pages/Private';
 import Signup from './pages/Signup';
 import Login from './pages/Login';

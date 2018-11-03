@@ -11,17 +11,16 @@ class ListPatients extends Component {
     isLoading: true,
   }
 
-
   handleDelete = (id) => {
     Api.deletePatient(id)
       .then(() => {
         // no funciona
         // this.getPatients()
+        this.props.history.push('/')
         window.location.reload()
       })
       .catch(error => console.log(error))
   }
-
 
   componentDidMount() {
     Api.getPatients()

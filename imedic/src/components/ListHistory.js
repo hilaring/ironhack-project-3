@@ -47,7 +47,7 @@ class ListHistory extends Component {
   render() {   
     return (
       <div id="private">
-        <h1 class="register-title">Medical History</h1>
+        <h1 className="register-title">Medical History</h1>
         <ul>
           {this.state.isLoading ? <h1>Loading</h1> : this.renderList()} 
         </ul>
