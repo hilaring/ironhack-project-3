@@ -11,7 +11,6 @@ class ListPatients extends Component {
     isLoading: true,
   }
 
-
   handleDelete = (id) => {
     Api.deletePatient(id)
       .then(() => {
@@ -22,7 +21,6 @@ class ListPatients extends Component {
       })
       .catch(error => console.log(error))
   }
-
 
   componentDidMount() {
     Api.getPatients()
