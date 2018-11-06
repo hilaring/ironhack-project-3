@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { IoIosLogOut } from 'react-icons/io';
+import { FaHome } from 'react-icons/fa';
 import '../style/main.css';
 
 const Menu = styled.div`
   text-align: center;
   font-size: 16px;
-  color: white;
-  background: #26272B;
+  color: black;
+  background: #F7F7F7;
   border: none;
   max-width: 50px;
-  height: 95vh;
+  height: 85vh;
   width: 60px;
 `;
 
@@ -25,8 +26,11 @@ export default class Navbar extends Component {
             <div>
               <p className="name-navbar">Hi {name}!</p>
             </div>
-            <div>
-                <i><IoIosLogOut className="icons" onClick={logoutUser}/></i>            
+            <div className="nav-btn">
+              <i><FaHome className="link" onClick="/"/></i>
+            </div>
+            <div className="nav-btn">
+              <i><IoIosLogOut className="icons" onClick={logoutUser}/></i>            
             </div>
           </div>
           ) : (

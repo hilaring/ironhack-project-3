@@ -24,7 +24,7 @@ class NewPatient extends Component {
     Api.createPatient({ name, last_name, email, number, adress })
       .then((result) => {
         console.log('', result)
-        this.props.history.push(`/private`)
+        this.props.history.push(`/`)
         window.location.reload()
       })
       .catch((error) => { console.log(error) })

@@ -20,6 +20,10 @@ class Api {
         return this.api.put(`/patients/${id}`, body);
     }
 
+    addHistory(id, body){
+        return this.api.put(`/patients/${id}`, body)
+    }
+
     createPatient(body) {
         return this.api.post(`/patients`, body);
     }
