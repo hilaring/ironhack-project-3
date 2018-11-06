@@ -10,6 +10,7 @@ class FormEditPatient extends Component {
     email: '',
     number: '',
     adress: '',
+    histories: [],
   }
 
   componentDidMount() {
@@ -17,13 +18,14 @@ class FormEditPatient extends Component {
     const { id } = this.props.match.params;
     Api.getPatient(id)
       .then(({ data }) => {
-        const { name, last_name, email, number, adress } = data
+        const { name, last_name, email, number, adress, histories } = data
         this.setState({
           name,
           last_name,
           email,
           number,
           adress,
+          histories,
         })
       })
   }
@@ -49,9 +51,9 @@ class FormEditPatient extends Component {
   render() {
     const { name, last_name, email, number, adress } = this.state
     return (
-      <div>
-        <h1 className="register-title">Edit Patient</h1>
-        <form onSubmit={this.handleSubmit} className="register">
+        <div className="register">
+        <h1 className="box-title">Patient information</h1>
+        <form onSubmit={this.handleSubmit}>
           <label className="label" htmlFor="">Name</label>
           <input className="register-input" type="text" value={name} name="name" onChange={this.handleOnChange} placeholder="Name" />
           <label className="label" htmlFor="">Last name</label>
@@ -64,7 +66,8 @@ class FormEditPatient extends Component {
           <input className="register-input" type="text" value={adress} name="adress" onChange={this.handleOnChange} placeholder="Adress" />
           <input className="register-button" type="submit" value="Update" />
         </form>
-      </div>
+        </div>
+      
     )
   }
 }

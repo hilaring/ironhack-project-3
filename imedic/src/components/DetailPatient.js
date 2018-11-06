@@ -1,49 +1,50 @@
-import React, { Component, Fragment } from 'react'
-import { Link } from 'react-router-dom';
-import Patients from '../lib/patients-service';
-import FormEditPatient from './FormEditPatient';
-import ListHistory from './ListHistory';
+import React, { Component, Fragment } from "react";
+import Patients from "../lib/patients-service";
+import FormEditPatient from "./FormEditPatient";
+import FormCreateHistory from "./FormCreateHistory";
+import ListHistory from "./ListHistory";
 
 class DetailPatient extends Component {
   state = {
     patient: {},
-    isLoading: true,
-  }
+    isLoading: true
+  };
 
   componentDidMount() {
     const { id } = this.props.match.params;
-    Patients.getPatient(id)
-      .then(({ data }) => {
-        this.setState({
-          patient: data,
-          isLoading: false,
-        })
-      })
+    Patients.getPatient(id).then(({ data }) => {
+      this.setState({
+        patient: data,
+        isLoading: false
+      });
+    });
   }
 
   renderInfo = () => {
     return (
+      
       <Fragment>
-        <div className="patients-container">
-          <div className="register">
-            <ListHistory />
-          </div>
-          <div id="privated">
-            <FormEditPatient />
-          </ div>
-          <Link className="link" to="/">Back to home</Link>
+        <div className="box-detail-patient">  
+          <FormEditPatient />
         </div>
-      </Fragment>
+        <div className="box-detail-patient">  
+          <ListHistory />
+        </div>
+        <div className="box-detail-patient">  
+          <FormCreateHistory />
+          
+        </div>
+        </Fragment>
+      
     );
-  }
+  };
 
   render() {
-
     return (
-      <div>
+      <div className="patients-container">
         {!this.state.isLoading ? this.renderInfo() : <div>Loading</div>}
       </div>
-    )
+    );
   }
 }
 export default DetailPatient;

@@ -33,7 +33,6 @@ class Login extends Component {
     const { username, password } = this.state;
     return (
       <div id="init-box">
-      <h1 className="welcome-title">Welcome</h1>
         <form onSubmit={this.handleFormSubmit} className="init-form">
           <input  className="register-input" type="text" name="username" value={username} onChange={this.handleChange}placeholder="Username"/>
           <input  className="register-input" type="password" name="password" value={password} onChange={this.handleChange} placeholder="Password"/>

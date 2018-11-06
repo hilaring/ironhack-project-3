@@ -43,13 +43,12 @@ class Signup extends Component {
     const { username, name, lastname, email, password } = this.state;
     return (
       <div id="init-box">
-      <h1 className="welcome-title">Welcome</h1>
         <form onSubmit={this.handleFormSubmit} className="init-form">
-          <input className="register-input" type="text" name="username" value={username} onChange={this.handleChange} placeholder="Username"/><br />
-          <input className="register-input" type="text" name="name" value={name} onChange={this.handleChange} placeholder="Name"/><br />
+          <input className="register-input" type="text" name="username" value={username} onChange={this.handleChange} placeholder="Username" required/><br />
+          <input className="register-input" type="text" name="name" value={name} onChange={this.handleChange} placeholder="Name" required/><br />
           <input className="register-input" type="text" name="lastname" value={lastname} onChange={this.handleChange} placeholder="Last Name"/><br />
-          <input className="register-input" type="email" name="email" value={email} onChange={this.handleChange} placeholder="Email"/><br />
-          <input className="register-input" type="password" name="password" value={password} onChange={this.handleChange} placeholder="Password"/><br />
+          <input className="register-input" type="email" name="email" value={email} onChange={this.handleChange} placeholder="Email" required/><br />
+          <input className="register-input" type="password" name="password" value={password} onChange={this.handleChange} placeholder="Password" required/><br />
           <input className="register-button"type="submit" value="Signup" />
         </form>
         <p className="init-form">Already have account? 

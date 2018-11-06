@@ -8,8 +8,7 @@ const Heading = styled.div `
   padding-top 15px;
   padding-bottom: 5px;
   justify-content: middle;
-  background-color: #26272B;
-  border-bottom: 1px solid black;
+  background-color: #6D7AE0;
   height: 40px;
   witdh: 100%;
 `
