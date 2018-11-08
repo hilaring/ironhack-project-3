@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaRegEye, FaTrash } from 'react-icons/fa';
 import Api from '../lib/patients-service';
 import FormCreatePatient from './FormCreatePatient';
+import { withRouter } from "react-router-dom";
 
 class ListPatients extends Component {
 
@@ -14,7 +15,7 @@ class ListPatients extends Component {
   handleDelete = (id) => {
     Api.deletePatient(id)
       .then(() => {
-        this.props.history.push('/')
+        this.props.history.push(`/`)
         window.location.reload()
       })
       .catch(error => console.log(error))
@@ -60,4 +61,4 @@ class ListPatients extends Component {
   }
 }
 
-export default ListPatients;
+export default withRouter(ListPatients);

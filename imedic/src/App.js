@@ -16,7 +16,8 @@ class App extends Component {
   state = {
     isLogged: false,
     user: {},
-    status: 'loading'
+    status: 'loading',
+    selectedPatient: '',
   }
 
   setUser = (user) => {
@@ -35,6 +36,12 @@ class App extends Component {
         });
       })
       .catch( error => console.log(error))
+  }
+
+  selectedPatient = (patient) => {
+    this.setState({
+      selectedPatient: patient,
+    })
   }
 
   componentDidMount() {
@@ -56,7 +63,7 @@ class App extends Component {
   }
 
   render() {
-    const { isLogged, user, status } = this.state;
+    const { isLogged, user, status, selectedPatient } = this.state;
     switch (status) {
       case 'loading':
         return <div>Loading</div>
@@ -69,8 +76,8 @@ class App extends Component {
               <Switch className="test">
                 <AnonRoute path="/signup" component={Signup} setUser={this.setUser} isLogged={isLogged} />
                 <AnonRoute path="/login" component={Login} setUser={this.setUser} isLogged={isLogged} />
-                <PrivateRoute exact path="/" component={Private} isLogged={isLogged} user={user} />
-                <PrivateRoute path='/patients/:id' component={DetailPatient} isLogged={isLogged} user={user}/>
+                <PrivateRoute exact path="/" component={Private} isLogged={isLogged} user={user} patient={selectedPatient} changePatient={this.selectedPatient}/>
+                <PrivateRoute path='/patients/:id' component={DetailPatient} isLogged={isLogged} user={user} patient={selectedPatient} changePatient={this.selectedPatient}/>
               </Switch>
               </div>
             </Fragment>

@@ -3,9 +3,10 @@ import ListPatients from '../components/ListPatients';
 
 class Private extends Component {
   render() {
+    console.log(this.props)
     return (
       <div id='private'>
-        <ListPatients/>
+        <ListPatients patient={this.props.selectedPatient} changePatient={this.props.selectedPatient}/>
       </div>
     )
   }

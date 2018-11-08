@@ -4,6 +4,7 @@ import { IoIosLogOut } from 'react-icons/io';
 import { FaHome } from 'react-icons/fa';
 import '../style/main.css';
 
+
 const Menu = styled.div`
   text-align: center;
   font-size: 16px;
@@ -15,7 +16,7 @@ const Menu = styled.div`
   width: 60px;
 `;
 
-export default class Navbar extends Component {
+ class Navbar extends Component {
   render() {
     const { isLogged, user, logoutUser } = this.props;
     const { name } = user;
@@ -42,3 +43,5 @@ export default class Navbar extends Component {
     );
   }
 }
+
+export default Navbar;

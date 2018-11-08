@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Api from "../lib/history-service";
-import FormCreateHistory from "./FormCreateHistory";
+
 const moment = require("moment");
 
 class ListHistory extends Component {

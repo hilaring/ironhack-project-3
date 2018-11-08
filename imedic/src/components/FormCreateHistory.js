@@ -10,6 +10,9 @@ class NewHistory extends Component {
     prescription: '',
   }
 
+  componentDidMount(){
+    console.log(this.props.match.params.id);
+  }
   handleOnChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
@@ -25,6 +28,7 @@ class NewHistory extends Component {
       .then((result) => {
         console.log('', result)
         this.props.history.push(`/`)
+        window.location.reload()
 
       })
       .catch((error) => { console.log(error) })

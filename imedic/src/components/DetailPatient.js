@@ -9,7 +9,6 @@ class DetailPatient extends Component {
     patient: {},
     isLoading: true
   };
-
   componentDidMount() {
     const { id } = this.props.match.params;
     Patients.getPatient(id).then(({ data }) => {
@@ -19,8 +18,9 @@ class DetailPatient extends Component {
       });
     });
   }
-
+  
   renderInfo = () => {
+    console.log(this.props);
     return (
       
       <Fragment>
