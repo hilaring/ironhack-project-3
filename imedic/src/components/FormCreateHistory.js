@@ -8,6 +8,7 @@ class NewHistory extends Component {
     syntoms: '',
     disease: '',
     prescription: '',
+    changePatient:[],
   }
 
   componentDidMount(){
@@ -43,7 +44,8 @@ class NewHistory extends Component {
           <input className="register-input" type="text" value={syntoms} name="syntoms" onChange={this.handleOnChange} placeholder="Syntoms"/>
           <input className="register-input" type="text" value={disease} name="disease" onChange={this.handleOnChange} placeholder="Disease"/>
           <input className="register-input" type="text" value={prescription} name="prescription" onChange={this.handleOnChange} placeholder="Prescription"/>
-           <input className="register-button" type="submit" value="create"/>
+          <input className="register-button" type="submit" value="create"/>
+          <button onClick={() => {this.props.changePatient(this.state.patient)}}>Create</button>
         </form>
       </div>
     )

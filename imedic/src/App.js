@@ -17,7 +17,7 @@ class App extends Component {
     isLogged: false,
     user: {},
     status: 'loading',
-    selectedPatient: '',
+    selectedPatient: {},
   }
 
   setUser = (user) => {
@@ -39,6 +39,7 @@ class App extends Component {
   }
 
   selectedPatient = (patient) => {
+    console.log("hola", patient);
     this.setState({
       selectedPatient: patient,
     })

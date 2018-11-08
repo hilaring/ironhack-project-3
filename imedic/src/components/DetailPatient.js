@@ -32,7 +32,6 @@ class DetailPatient extends Component {
         </div>
         <div className="box-detail-patient">  
           <FormCreateHistory />
-          
         </div>
         </Fragment>
       
