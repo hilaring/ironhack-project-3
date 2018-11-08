@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { IoIosLogOut } from 'react-icons/io';
 import { FaHome } from 'react-icons/fa';
 import '../style/main.css';
+import { Link } from 'react-router-dom'
 
 
 const Menu = styled.div`
@@ -28,7 +29,7 @@ const Menu = styled.div`
               <p className="name-navbar">Hi {name}!</p>
             </div>
             <div className="nav-btn">
-              <i><FaHome className="link" onClick="/"/></i>
+              <Link to="/"><FaHome className="link"  onClick="/"/></Link>
             </div>
             <div className="nav-btn">
               <i><IoIosLogOut className="icons" onClick={logoutUser}/></i>            
