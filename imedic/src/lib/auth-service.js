@@ -4,6 +4,7 @@ class Auth {
   constructor() {
     this.auth = axios.create({
       baseURL: 'http://localhost:5000',
+      // https://imedic-ih.herokuapp.com
       withCredentials: true
     })
   }

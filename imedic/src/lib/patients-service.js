@@ -4,6 +4,7 @@ class Api {
     constructor() {
         this.api = axios.create({
             baseURL: 'http://localhost:5000',
+            // https://imedic-ih.herokuapp.com
         })
     }
 
