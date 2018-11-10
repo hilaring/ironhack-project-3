@@ -25,14 +25,14 @@ class NewHistory extends Component {
     // const { _id, syntoms, disease, prescription } = this.state
     // console.log('data', syntoms, disease, prescription)
 
-    // Api.createHistory({ _id, syntoms, disease, prescription })
-    //   .then((result) => {
-    //     // console.log('', result)
-    //     // this.props.history.push(`/`)
-    //     // window.location.reload()
+    Api.createHistory({  })
+      .then((result) => {
+        console.log('', result)
+        this.props.history.push(`/`)
+        window.location.reload()
 
-    //   })
-    //   .catch((error) => { console.log(error) })
+      })
+      .catch((error) => { console.log(error) })
   }
 
   render() {
@@ -44,8 +44,8 @@ class NewHistory extends Component {
           <input className="register-input" type="text" value={syntoms} name="syntoms" onChange={this.handleOnChange} placeholder="Syntoms"/>
           <input className="register-input" type="text" value={disease} name="disease" onChange={this.handleOnChange} placeholder="Disease"/>
           <input className="register-input" type="text" value={prescription} name="prescription" onChange={this.handleOnChange} placeholder="Prescription"/>
-          <input className="register-button" type="submit" value="create"/>
-          <button onClick={() => {this.props.changePatient({syntoms: syntoms, disease: disease, prescription: prescription})}}>Create</button>
+          {/* <input className="register-button" type="submit" value="create"/> */}
+          <button  className="register-button" onClick={() => {this.props.changePatient({syntoms: syntoms, disease: disease, prescription: prescription})}}>Create</button>
         </form>
       </div>
     )
