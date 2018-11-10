@@ -22,9 +22,7 @@ class NewHistory extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    // const { _id, syntoms, disease, prescription } = this.state
-    // console.log('data', syntoms, disease, prescription)
-
+    
     Api.createHistory({  })
       .then((result) => {
         console.log('', result)
@@ -44,7 +42,6 @@ class NewHistory extends Component {
           <input className="register-input" type="text" value={syntoms} name="syntoms" onChange={this.handleOnChange} placeholder="Syntoms"/>
           <input className="register-input" type="text" value={disease} name="disease" onChange={this.handleOnChange} placeholder="Disease"/>
           <input className="register-input" type="text" value={prescription} name="prescription" onChange={this.handleOnChange} placeholder="Prescription"/>
-          {/* <input className="register-button" type="submit" value="create"/> */}
           <button  className="register-button" onClick={() => {this.props.changePatient({syntoms: syntoms, disease: disease, prescription: prescription})}}>Create</button>
         </form>
       </div>
