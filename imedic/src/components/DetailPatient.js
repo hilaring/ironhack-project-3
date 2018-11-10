@@ -7,7 +7,8 @@ import ListHistory from "./ListHistory";
 class DetailPatient extends Component {
   state = {
     patient: {},
-    isLoading: true
+    isLoading: true,
+    // historyPatient: {}, 
   };
   componentDidMount() {
     const { id } = this.props.match.params;
@@ -17,6 +18,19 @@ class DetailPatient extends Component {
         isLoading: false
       });
     });
+  }
+
+  changePatient = (historyPatient) => {
+    const { id } = this.props.match.params;
+    console.log('desde deatil: ', historyPatient);
+
+    Patients.addHistory(id, historyPatient)
+      .then((data)=>{
+        console.log('res: ', data)
+      })
+      .catch((err)=>{
+        console.log(err);
+      })
   }
   
   renderInfo = () => {
@@ -31,7 +45,7 @@ class DetailPatient extends Component {
           <ListHistory />
         </div>
         <div className="box-detail-patient">  
-          <FormCreateHistory />
+          <FormCreateHistory changePatient={this.changePatient}/>
         </div>
         </Fragment>
       

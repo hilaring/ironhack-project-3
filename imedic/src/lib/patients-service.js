@@ -18,11 +18,12 @@ class Api {
     }
 
     editPatient(id, body) {
+        console.log('desde service: ', body)
         return this.api.put(`/patients/${id}`, body);
     }
 
-    addHistory(id, body){
-        return this.api.put(`/patients/${id}`, body)
+    addHistory(id, body) {
+        return this.api.put(`/patients/add-history/${id}`, body);
     }
 
     createPatient(body) {
