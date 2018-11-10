@@ -9,15 +9,8 @@ class ListHistory extends Component {
     isLoading: true
   };
 
-  handleDelete = id => {
-    Api.deleteHistory(id)
-      .then(() => {
-        this.props.history.push("/");
-      })
-      .catch(error => console.log(error));
-  };
-
   componentDidMount() {
+    console.log('hola', this.props.patient);
     Api.getHistories()
       .then(data => {
         console.log(data);
@@ -30,7 +23,7 @@ class ListHistory extends Component {
   }
 
   renderList = () => {
-    return this.state.histories.map(
+    return this.props.patient.histories.map(
       ({ _id, created_at, syntoms, disease, prescription }) => (
         <div className="list-history">
         <ul key={_id}>
@@ -53,8 +46,9 @@ class ListHistory extends Component {
         </ul>
         </div>
       )
-    );
-  };
+      );
+    };
+
 
   render() {
     return (

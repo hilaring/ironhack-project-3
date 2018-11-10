@@ -42,7 +42,7 @@ class DetailPatient extends Component {
           <FormEditPatient />
         </div>
         <div className="box-detail-patient">  
-          <ListHistory />
+          <ListHistory patient={this.state.patient}/>
         </div>
         <div className="box-detail-patient">  
           <FormCreateHistory changePatient={this.changePatient}/>
