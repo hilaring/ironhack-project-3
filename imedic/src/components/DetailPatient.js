@@ -26,7 +26,7 @@ class DetailPatient extends Component {
 
     Patients.addHistory(id, historyPatient)
       .then((data)=>{
-        console.log('res: ', data)
+        console.log('', data)
       })
       .catch((err)=>{
         console.log(err);
