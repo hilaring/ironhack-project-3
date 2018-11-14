@@ -23,6 +23,7 @@ const Menu = styled.div`
     const { name } = user;
     return (
       <Menu>
+        <div>
         {isLogged ? (
           <div className="nav-bar">
             <div>
@@ -40,6 +41,7 @@ const Menu = styled.div`
             <i></i>
           </div>
         )}
+        </div>
       </Menu>
     );
   }
