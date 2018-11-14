@@ -29,7 +29,7 @@ class ListPatients extends Component {
           isLoading: false,
         })
       })
-      .catch((error) => console.log("Error: ", error))
+      .catch((error) => console.log("", error))
   }
 
   renderList = () => {

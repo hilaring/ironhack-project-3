@@ -39,7 +39,6 @@ class App extends Component {
   }
 
   selectedPatient = (patient) => {
-    console.log("hola", patient);
     this.setState({
       selectedPatient: patient,
     })
