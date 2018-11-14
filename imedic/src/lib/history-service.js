@@ -22,7 +22,6 @@ class Api {
     }
 
     createHistory(body) {
-        console.log(body)
         return this.api.post(`/`, body);
     }
 
