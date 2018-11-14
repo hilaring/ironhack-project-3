@@ -13,7 +13,7 @@ const Heading = styled.div `
   witdh: 100%;
 `
 
-export default class Title extends Component {
+class Title extends Component {
   render() {
     return (
       <Heading>
@@ -22,3 +22,4 @@ export default class Title extends Component {
     )
   }
 }
+export default Title;
