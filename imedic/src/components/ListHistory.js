@@ -10,7 +10,7 @@ class ListHistory extends Component {
   };
 
   componentDidMount() {
-    console.log('hola', this.props.patient);
+    console.log('', this.props.patient);
     Api.getHistories()
       .then(data => {
         console.log(data);

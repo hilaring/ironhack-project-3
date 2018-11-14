@@ -8,7 +8,6 @@ class DetailPatient extends Component {
   state = {
     patient: {},
     isLoading: true,
-    // historyPatient: {}, 
   };
   componentDidMount() {
     const { id } = this.props.match.params;
@@ -22,11 +21,11 @@ class DetailPatient extends Component {
 
   changePatient = (historyPatient) => {
     const { id } = this.props.match.params;
-    console.log('desde deatil: ', historyPatient);
+    console.log(' ', historyPatient);
 
     Patients.addHistory(id, historyPatient)
       .then((data)=>{
-        console.log('res: ', data)
+        console.log('', data)
       })
       .catch((err)=>{
         console.log(err);

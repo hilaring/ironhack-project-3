@@ -6,7 +6,7 @@ import FormCreatePatient from './FormCreatePatient';
 import { withRouter } from "react-router-dom";
 
 class ListPatients extends Component {
-
+ 
   state = {
     patients: [],
     isLoading: true,
@@ -17,6 +17,7 @@ class ListPatients extends Component {
       .then(() => {
         this.props.history.push(`/`)
         window.location.reload()
+        
       })
       .catch(error => console.log(error))
   }
@@ -27,9 +28,10 @@ class ListPatients extends Component {
         this.setState({
           patients: data,
           isLoading: false,
+          
         })
       })
-      .catch((error) => console.log("Error: ", error))
+      .catch((error) => console.log(" ", error))
   }
 
   renderList = () => {

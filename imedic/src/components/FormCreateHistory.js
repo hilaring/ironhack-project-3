@@ -11,9 +11,6 @@ class NewHistory extends Component {
     changePatient:[],
   }
 
-  componentDidMount(){
-    console.log(this.props.match.params.id);
-  }
   handleOnChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
