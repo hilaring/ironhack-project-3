@@ -8,8 +8,8 @@ class DetailPatient extends Component {
   state = {
     patient: {},
     isLoading: true,
-    // historyPatient: {}, 
   };
+
   componentDidMount() {
     const { id } = this.props.match.params;
     Patients.getPatient(id).then(({ data }) => {
@@ -22,7 +22,7 @@ class DetailPatient extends Component {
 
   changePatient = (historyPatient) => {
     const { id } = this.props.match.params;
-    console.log('desde deatil: ', historyPatient);
+    console.log('', historyPatient);
 
     Patients.addHistory(id, historyPatient)
       .then((data)=>{
@@ -34,7 +34,6 @@ class DetailPatient extends Component {
   }
   
   renderInfo = () => {
-    console.log(this.props);
     return (
       
       <Fragment>
